@@ -1,26 +1,206 @@
 aid: materials-zone
 name: Materials Zone
-description: Materials Zone is a company surfaced as a portfolio company of insight-partners and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Materials Zone (MaterialsZone) is a materials-informatics platform that centralizes materials
+  R&D data into a single, structured source of truth. Its RESTful API integrates with lab
+  instruments and supports Python scripts and analytical tools, letting teams automate workflows,
+  connect diverse data sources, and run domain-specific analysis. Data is organized as
+  Folders > Tables > Items, enriched with Parameters, Values, Measurements, Protocols and Parsers,
+  with per-organization data segregation and encryption in transit and at rest. The company is a
+  portfolio company of Insight Partners.
 url: https://raw.githubusercontent.com/api-evangelist/materials-zone/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - insight-partners
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enriched-from-openapi
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/66a76467298c454de539f7aa/66cef238e96d8f1502659d8f_WebClip%20%20256x256.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Materials Informatics
+- Materials Science
+- Research and Development
+- Laboratory Data
+- Data Management
+- Life Sciences
+apis:
+- aid: materials-zone:materials-zone-files-api
+  name: Materials Zone files API
+  description: Files are used to store data not related to specific items.
+  humanURL: https://developer.materials.zone/
+  baseURL: https://api.materials.zone/v2beta1
+  tags:
+  - files
+  properties:
+  - type: OpenAPI
+    url: openapi/materials-zone-files-api-openapi.yml
+  - type: Documentation
+    url: https://developer.materials.zone/
+- aid: materials-zone:materials-zone-folders-api
+  name: Materials Zone folders API
+  description: Folders are used to organize other Folders and Tables.
+  humanURL: https://developer.materials.zone/
+  baseURL: https://api.materials.zone/v2beta1
+  tags:
+  - folders
+  properties:
+  - type: OpenAPI
+    url: openapi/materials-zone-folders-api-openapi.yml
+  - type: Documentation
+    url: https://developer.materials.zone/
+- aid: materials-zone:materials-zone-items-api
+  name: Materials Zone items API
+  description: Items are the rows in tables.
+  humanURL: https://developer.materials.zone/
+  baseURL: https://api.materials.zone/v2beta1
+  tags:
+  - items
+  properties:
+  - type: OpenAPI
+    url: openapi/materials-zone-items-api-openapi.yml
+  - type: Documentation
+    url: https://developer.materials.zone/
+- aid: materials-zone:materials-zone-jobs-api
+  name: Materials Zone jobs API
+  description: Jobs are used to perform long running tasks.
+  humanURL: https://developer.materials.zone/
+  baseURL: https://api.materials.zone/v2beta1
+  tags:
+  - jobs
+  properties:
+  - type: OpenAPI
+    url: openapi/materials-zone-jobs-api-openapi.yml
+  - type: Documentation
+    url: https://developer.materials.zone/
+- aid: materials-zone:materials-zone-measurements-api
+  name: Materials Zone measurements API
+  description: Measurements are the files that are uploaded to the system and can be parsed.
+  humanURL: https://developer.materials.zone/
+  baseURL: https://api.materials.zone/v2beta1
+  tags:
+  - measurements
+  properties:
+  - type: OpenAPI
+    url: openapi/materials-zone-measurements-api-openapi.yml
+  - type: Documentation
+    url: https://developer.materials.zone/
+- aid: materials-zone:materials-zone-parameters-api
+  name: Materials Zone parameters API
+  description: Parameters are used to define the structure of columns in tables.
+  humanURL: https://developer.materials.zone/
+  baseURL: https://api.materials.zone/v2beta1
+  tags:
+  - parameters
+  properties:
+  - type: OpenAPI
+    url: openapi/materials-zone-parameters-api-openapi.yml
+  - type: Documentation
+    url: https://developer.materials.zone/
+- aid: materials-zone:materials-zone-parsers-api
+  name: Materials Zone parsers API
+  description: >-
+    Parsers are used to convert instrument specific output files to a MaterialsZone common format.
+  humanURL: https://developer.materials.zone/
+  baseURL: https://api.materials.zone/v2beta1
+  tags:
+  - parsers
+  properties:
+  - type: OpenAPI
+    url: openapi/materials-zone-parsers-api-openapi.yml
+  - type: Documentation
+    url: https://developer.materials.zone/
+- aid: materials-zone:materials-zone-protocols-api
+  name: Materials Zone protocols API
+  description: Protocols are used to group parameters in tables.
+  humanURL: https://developer.materials.zone/
+  baseURL: https://api.materials.zone/v2beta1
+  tags:
+  - protocols
+  properties:
+  - type: OpenAPI
+    url: openapi/materials-zone-protocols-api-openapi.yml
+  - type: Documentation
+    url: https://developer.materials.zone/
+- aid: materials-zone:materials-zone-tables-api
+  name: Materials Zone tables API
+  description: Tables are organized in folders, and contain Items.
+  humanURL: https://developer.materials.zone/
+  baseURL: https://api.materials.zone/v2beta1
+  tags:
+  - tables
+  properties:
+  - type: OpenAPI
+    url: openapi/materials-zone-tables-api-openapi.yml
+  - type: Documentation
+    url: https://developer.materials.zone/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: OpenAPI
+  url: openapi/materials-zone-openapi.json
+- type: DeveloperPortal
+  url: https://developer.materials.zone/
+- type: Documentation
+  url: https://developer.materials.zone/
+- type: APIReference
+  url: https://api.materials.zone/v2beta1/swagger.json
+- type: GettingStarted
+  url: https://developer.materials.zone/
+- type: Authentication
+  url: authentication/materials-zone-authentication.yml
+- type: Conventions
+  url: conventions/materials-zone-conventions.yml
+- type: ErrorCatalog
+  url: errors/materials-zone-problem-types.yml
+- type: DataModel
+  url: data-model/materials-zone-data-model.yml
+- type: Lifecycle
+  url: lifecycle/materials-zone-lifecycle.yml
+- type: Conformance
+  url: conformance/materials-zone-conformance.yml
+- type: Overlay
+  url: overlays/materials-zone-openapi-overlay.yaml
+- type: LLMsTxt
+  url: llms/materials-zone-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+- type: AgenticAccess
+  url: agentic-access/materials-zone-agentic-access.yml
+- type: DomainSecurity
+  url: security/materials-zone-domain-security.yml
+- type: Blog
+  url: https://www.materials.zone/blog
+- type: Login
+  url: https://app.materials.zone/signin
+- type: Support
+  url: mailto:contact@materials.zone
+- type: TermsOfService
+  url: https://www.materials.zone/legals/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.materials.zone/legals/privacy-policy
 - type: Website
   url: https://www.materials.zone/
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 14
+  pass: local-v1
