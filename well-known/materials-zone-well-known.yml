@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of /.well-known/ on materials.zone hosts
+note: >-
+  No real .well-known discovery documents were found. www.materials.zone returns 404 for all
+  probed paths. app.materials.zone returns HTTP 200 for every path but the body is the SPA
+  index.html shell (content-type text/html), i.e. a catch-all, not a genuine well-known document.
+hosts:
+- host: https://www.materials.zone
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+- host: https://app.materials.zone
+  documents:
+  - {path: /.well-known/security.txt, status: 200, note: SPA index.html shell, not a real document}
+  - {path: /.well-known/openid-configuration, status: 200, note: SPA index.html shell, not a real document}
+  - {path: /.well-known/oauth-authorization-server, status: 200, note: SPA index.html shell, not a real document}
+  - {path: /.well-known/api-catalog, status: 200, note: SPA index.html shell, not a real document}
+  - {path: /.well-known/ai-plugin.json, status: 200, note: SPA index.html shell, not a real document}

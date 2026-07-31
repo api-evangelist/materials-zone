@@ -1,0 +1,53 @@
+generated: '2026-07-20'
+method: searched
+source: openapi/materials-zone-openapi.json
+docs: https://developer.materials.zone/
+authentication:
+  style: api-key
+  header: authorization
+  notes: Private per-user API key passed in the `authorization` header on every request.
+  ref: authentication/materials-zone-authentication.yml
+media_type:
+  request: application/json
+  response: application/json
+versioning:
+  scheme: uri-path
+  current: v2beta1
+  base_url: https://api.materials.zone/v2beta1
+  ref: lifecycle/materials-zone-lifecycle.yml
+pagination:
+  style: cursor
+  request_params:
+  - name: cursor
+    in: query
+    description: Pass the previous page's endCursor to fetch the next page; omit for the first page.
+  - name: pageSize
+    in: query
+    default: 100
+    description: Number of items per page.
+  response_envelope:
+    data: array of results (the page)
+    pagination:
+      startCursor: string, uniquely identifies the first item in the page
+      endCursor: string, uniquely identifies the last item in the page
+      hasNextPage: boolean, whether another page is available
+  applies_to:
+  - GET /tables/{tableId}/items
+  - GET /folders
+  - GET /tables
+  - GET /parsers
+  - GET /jobs
+idempotency:
+  supported: false
+  notes: No idempotency-key header or parameter is documented in the spec or docs.
+error_envelope:
+  shape: '{ code: string, message: string }'
+  format: custom
+  problem_json: false
+  ref: errors/materials-zone-problem-types.yml
+rate_limiting:
+  documented: false
+metadata:
+  notes: >-
+    Resources are organized as Folders > Tables > Items, with Parameters, Values, Measurements,
+    Protocols, Parsers, Files, Jobs and Job Runs as related entities.

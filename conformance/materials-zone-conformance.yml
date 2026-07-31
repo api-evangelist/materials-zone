@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/materials-zone-openapi.json
+standards:
+- id: openapi-3.1
+  conforms: true
+  evidence: spec declares openapi 3.1.0
+- id: oauth2
+  conforms: false
+  evidence: only an apiKey security scheme is declared
+- id: oidc
+  conforms: false
+- id: apikey-auth
+  conforms: true
+  evidence: securityScheme ApiKey (apiKey in header, name Authorization) applied globally
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: error envelope is a custom { code, message } object, not application/problem+json
+- id: cursor-pagination
+  conforms: true
+  evidence: cursor/pageSize query params with startCursor/endCursor/hasNextPage response envelope
+- id: json-api
+  conforms: false
+- id: rest-json
+  conforms: true
+  evidence: standard HTTP verbs (GET/POST/PATCH/DELETE) with JSON request/response bodies
+- id: tls-encryption
+  conforms: true
+  evidence: HTTPS enforced (TLSv1.3), data encrypted in transit and at rest per docs

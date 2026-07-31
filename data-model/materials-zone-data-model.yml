@@ -1,0 +1,86 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/materials-zone-openapi.json
+notes: >-
+  Entity-relationship graph derived from OpenAPI component schemas and their id-reference fields.
+  MaterialsZone organizes materials-informatics data as Folders > Tables > Items, with Parameters,
+  Values, Measurements, Protocols and Parsers describing and enriching the data.
+entities:
+- name: Folder
+  key: id
+  relationships:
+  - has_many: Folder
+    via: childFolderIds
+    note: nested sub-folders
+  - has_many: Table
+    via: childTableIds
+  - belongs_to: Folder
+    via: parentId
+- name: Table
+  key: id
+  relationships:
+  - belongs_to: Folder
+    via: folderId
+  - has_many: Protocol
+    via: protocols
+  - has_many: Item
+    via: table membership (GET /tables/{tableId}/items)
+- name: Item
+  key: id
+  relationships:
+  - belongs_to: Table
+    via: tableId
+  - has_many: TableValue
+    via: values
+  - has_many: Measurement
+    via: measurements
+- name: TableValue
+  relationships:
+  - belongs_to: Parameter
+    via: parameterId
+  - belongs_to: FormulationProtocol
+    via: formulationProtocolId
+  - belongs_to: Item
+    via: formulationItemId
+- name: Parameter
+  key: id
+  relationships:
+  - belongs_to: Item
+    via: titleItemId
+  - has_many: Parameter
+    via: inputParameterIds
+    note: calculated-parameter inputs
+- name: Measurement
+  key: id
+  relationships:
+  - belongs_to: Item
+    via: parent item (POST /items/{itemId}/measurements)
+  - belongs_to: Parser
+    via: parserCode
+- name: Protocol
+  key: id
+  relationships:
+  - belongs_to: Table
+    via: parent table (POST /tables/{tableId}/protocols)
+- name: FormulationProtocol
+  key: id
+  relationships:
+  - belongs_to: Table
+    via: parent table (POST /tables/{tableId}/formulation-protocols)
+- name: Parser
+  key: id
+  identifier: code
+  note: auto-assigned code like AB-CD-EF-25 from physicalMeasurement/instrumentManufacturer/instrumentModel
+- name: Job
+  key: id
+  relationships:
+  - has_many: JobRun
+    via: job runs (POST /jobs/{jobId}/job-runs)
+- name: JobRun
+  key: id
+  relationships:
+  - belongs_to: Job
+    via: jobId
+- name: File
+  key: code
+  note: presigned download/upload URLs (GET /files/{code})

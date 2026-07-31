@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: generated
+source: openapi/materials-zone-openapi.json
+note: >-
+  Operations in the MaterialsZone OpenAPI do not declare operationId values; skills reference
+  operations by method + path (verified present in the spec).
+skills:
+- file: materials-zone-build-table-and-add-items.md
+  name: Build a data table and add items
+  api: openapi/materials-zone-openapi.json
+  operations:
+  - POST /folders
+  - POST /tables
+  - POST /tables/{tableId}/items
+  - POST /tables/{tableId}/items/batch
+  - GET /tables/{tableId}/items
+- file: materials-zone-ingest-measurements-with-parser.md
+  name: Ingest instrument measurements with a parser
+  api: openapi/materials-zone-openapi.json
+  operations:
+  - POST /parsers
+  - GET /parsers
+  - GET /parsers/{parserId}
+  - POST /items/{itemId}/measurements
+  - GET /files/{code}
+- file: materials-zone-paginate-table-items.md
+  name: Page through all items in a table
+  api: openapi/materials-zone-openapi.json
+  operations:
+  - GET /tables/{tableId}/items

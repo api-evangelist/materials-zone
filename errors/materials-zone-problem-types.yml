@@ -1,0 +1,48 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/materials-zone-openapi.json
+format: custom
+envelope:
+  shape: '{ code: string, message: string }'
+  schema: components.schemas.Error
+  problem_json: false
+  notes: >-
+    Errors are returned as a JSON object with required string fields `code` and `message`.
+    This is not RFC 9457 application/problem+json.
+problems:
+- status: 400
+  title: Bad Request
+  description: The request was malformed or contained invalid parameters or payload.
+  schema: Error
+  seen_on:
+  - POST /folders
+  - GET /folders/{folderId}
+  - PATCH /items/{itemId}
+  - POST /items/{itemId}/measurements
+  - POST /tables
+  - POST /tables/{tableId}/items
+  - POST /tables/{tableId}/items/batch
+- status: 401
+  title: Unauthorized
+  description: Missing or invalid API key in the `authorization` header.
+  schema: Error
+  seen_on:
+  - all operations
+- status: 403
+  title: Forbidden
+  description: The API key is valid but not permitted to perform this operation.
+  schema: Error
+  seen_on:
+  - POST /parsers
+  - PATCH /parsers/{parserId}
+  - DELETE /parsers/{parserId}
+  - GET /parsers/{parserId}
+- status: 409
+  title: Conflict
+  description: The request conflicts with the current state of the resource (e.g. concurrent update).
+  schema: Error
+  seen_on:
+  - PATCH /parameters/{parameterId}
+  - PATCH /protocols/{protocolId}
+  - PATCH /formulation-protocols/{protocolId}
+  - PATCH /tables/{tableId}

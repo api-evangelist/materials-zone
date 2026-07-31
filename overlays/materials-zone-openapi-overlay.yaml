@@ -1,0 +1,17 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Materials Zone API
+  version: 1.0.0
+extends: openapi/materials-zone-openapi.json
+actions:
+- target: $.info
+  update:
+    x-apievangelist-enriched: '2026-07-20'
+    x-apievangelist-auth: api-key (authorization header)
+    x-apievangelist-pagination: cursor (cursor + pageSize; startCursor/endCursor/hasNextPage envelope)
+    x-apievangelist-error-envelope: '{ code, message } (not RFC 9457)'
+- target: $.info
+  update:
+    x-apievangelist-notes: >-
+      Operations in this spec do not declare operationId values; API Evangelist artifacts
+      reference operations by method + path. Consider adding stable operationIds.

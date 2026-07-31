@@ -1,0 +1,151 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: openapi/materials-zone-openapi.json
+note: No official hosted/remote MCP server was found. Candidate tool list derived from OpenAPI operations.
+  Operations lack operationId; tools reference method + path.
+server:
+  name: materials-zone
+  transport: http
+  url: null
+tools:
+- name: get_files
+  description: Get a file
+  method: GET
+  path: /files/{code}
+- name: get_folders
+  description: Get all folders
+  method: GET
+  path: /folders
+- name: create_folders
+  description: Create a folder
+  method: POST
+  path: /folders
+- name: get_folders
+  description: Get a single folder
+  method: GET
+  path: /folders/{folderId}
+- name: get_items
+  description: Get a single item
+  method: GET
+  path: /items/{itemId}
+- name: update_items
+  description: Update a single item
+  method: PATCH
+  path: /items/{itemId}
+- name: delete_items
+  description: Delete a single item
+  method: DELETE
+  path: /items/{itemId}
+- name: get_jobs
+  description: Get all jobs
+  method: GET
+  path: /jobs
+- name: create_jobs
+  description: Trigger a job run
+  method: POST
+  path: /jobs/{jobId}/job-runs
+- name: create_measurements
+  description: Create a measurement
+  method: POST
+  path: /items/{itemId}/measurements
+- name: update_measurements
+  description: Update existing measurement
+  method: PATCH
+  path: /items/{itemId}/measurements/{measurementId}
+- name: delete_measurements
+  description: Delete a single measurement
+  method: DELETE
+  path: /items/{itemId}/measurements/{measurementId}
+- name: create_parameters
+  description: Create a new parameter in a protocol
+  method: POST
+  path: /protocols/{protocolId}/parameters
+- name: update_parameters
+  description: Update a parameter
+  method: PATCH
+  path: /parameters/{parameterId}
+- name: delete_parameters
+  description: Delete a parameter
+  method: DELETE
+  path: /parameters/{parameterId}
+- name: create_parsers
+  description: Create a new parser
+  method: POST
+  path: /parsers
+- name: get_parsers
+  description: Get all parsers
+  method: GET
+  path: /parsers
+- name: update_parsers
+  description: Update a parser
+  method: PATCH
+  path: /parsers/{parserId}
+- name: delete_parsers
+  description: Delete a parser
+  method: DELETE
+  path: /parsers/{parserId}
+- name: get_parsers
+  description: Get a parser
+  method: GET
+  path: /parsers/{parserId}
+- name: create_protocols
+  description: Create a new protocol in a table
+  method: POST
+  path: /tables/{tableId}/protocols
+- name: create_protocols
+  description: Create a new formulation protocol in a table
+  method: POST
+  path: /tables/{tableId}/formulation-protocols
+- name: update_protocols
+  description: Update a protocol
+  method: PATCH
+  path: /protocols/{protocolId}
+- name: delete_protocols
+  description: Delete a protocol
+  method: DELETE
+  path: /protocols/{protocolId}
+- name: update_protocols
+  description: Update a formulation protocol
+  method: PATCH
+  path: /formulation-protocols/{protocolId}
+- name: delete_protocols
+  description: Delete a formulation protocol
+  method: DELETE
+  path: /formulation-protocols/{protocolId}
+- name: get_tables
+  description: Get all tables
+  method: GET
+  path: /tables
+- name: create_tables
+  description: Create a new table
+  method: POST
+  path: /tables
+- name: get_tables
+  description: Get a single table
+  method: GET
+  path: /tables/{tableId}
+- name: update_tables
+  description: Update a table
+  method: PATCH
+  path: /tables/{tableId}
+- name: delete_tables
+  description: Delete a table
+  method: DELETE
+  path: /tables/{tableId}
+- name: get_tables
+  description: Get all items from a table
+  method: GET
+  path: /tables/{tableId}/items
+- name: create_tables
+  description: Create a new item in a table
+  method: POST
+  path: /tables/{tableId}/items
+- name: create_tables
+  description: Create multiple items in a table
+  method: POST
+  path: /tables/{tableId}/items/batch
+- name: update_tables
+  description: Update multiple items in a table
+  method: PATCH
+  path: /tables/{tableId}/items/batch

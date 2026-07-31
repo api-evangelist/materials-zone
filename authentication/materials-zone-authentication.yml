@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: openapi/materials-zone-openapi.json
+docs: https://developer.materials.zone/
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+notes: >-
+  Each user within the organization requests a private API key. The key is passed
+  in the `authorization` request header on every call (e.g. `--header 'authorization: <api-key>'`).
+  API keys can be rotated on request at any frequency and provide an audit trail. Data is
+  segregated per organization and encrypted in transit and at rest. No OAuth2/OIDC surface.
+schemes:
+- name: ApiKey
+  type: apiKey
+  in: header
+  parameter: Authorization
+  sources:
+  - openapi/materials-zone-openapi.json

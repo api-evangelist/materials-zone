@@ -1,0 +1,30 @@
+{
+  "provider": "materials-zone",
+  "sources": [
+    "materials-zone-files-api-openapi.yml",
+    "materials-zone-folders-api-openapi.yml",
+    "materials-zone-items-api-openapi.yml",
+    "materials-zone-jobs-api-openapi.yml",
+    "materials-zone-measurements-api-openapi.yml",
+    "materials-zone-parameters-api-openapi.yml",
+    "materials-zone-parsers-api-openapi.yml",
+    "materials-zone-protocols-api-openapi.yml",
+    "materials-zone-tables-api-openapi.yml"
+  ],
+  "outputs": [
+    "materials-zone-files-api-openapi.yml",
+    "materials-zone-folders-api-openapi.yml",
+    "materials-zone-items-api-openapi.yml",
+    "materials-zone-jobs-api-openapi.yml",
+    "materials-zone-measurements-api-openapi.yml",
+    "materials-zone-parameters-api-openapi.yml",
+    "materials-zone-parsers-api-openapi.yml",
+    "materials-zone-protocols-api-openapi.yml",
+    "materials-zone-tables-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

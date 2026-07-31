@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/materials-zone-openapi.json
+versioning:
+  scheme: uri-path
+  current: v2beta1
+  base_url: https://api.materials.zone/v2beta1
+  docs: https://developer.materials.zone/
+  notes: >-
+    The API version is embedded in the URI path (`/v2beta1`). A staging environment exists at
+    https://api-staging.materials.zone/v2beta1. The `beta` marker indicates a pre-1.0 surface.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No deprecation policy or RFC 8594 Sunset/Deprecation header support was found.
+sla:
+  url: null
+status_page: null
+deprecated_operations: []
+notes: >-
+  No public status page, SLA, or deprecation policy were discovered on the developer or
+  marketing surface as of the generated date.
