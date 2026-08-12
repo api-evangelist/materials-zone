@@ -155,8 +155,10 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: MCPServer
+  url: mcp/materials-zone-mcp.yml
 - type: OpenAPI
-  url: openapi/materials-zone-openapi.json
+  url: openapi/_original/materials-zone-openapi.json
 - type: DeveloperPortal
   url: https://developer.materials.zone/
 - type: Documentation
