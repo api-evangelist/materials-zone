@@ -1,0 +1,60 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Materials Zone files jobs API",
+    "version": "2.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "jobs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get all jobs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.materials.zone/v2beta1/jobs"
+          },
+          "docs": "This operation retrieves all jobs."
+        },
+        {
+          "info": {
+            "name": "Trigger a job run",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.materials.zone/v2beta1/jobs/:jobId/job-runs",
+            "params": [
+              {
+                "name": "jobId",
+                "value": "job-id",
+                "type": "path",
+                "description": "The id of the job to trigger."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "This operation triggers a job run."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

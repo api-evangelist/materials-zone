@@ -1,0 +1,71 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Materials Zone files folders API",
+    "version": "2.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "folders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get all folders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.materials.zone/v2beta1/folders"
+          },
+          "docs": "This operation retrieves all folders that are accessible to the user."
+        },
+        {
+          "info": {
+            "name": "Create a folder",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.materials.zone/v2beta1/folders",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "This operation creates a folder."
+        },
+        {
+          "info": {
+            "name": "Get a single folder",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.materials.zone/v2beta1/folders/:folderId",
+            "params": [
+              {
+                "name": "folderId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the folder to return."
+              }
+            ]
+          },
+          "docs": "This operation retrieves a single folder."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

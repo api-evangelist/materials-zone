@@ -1,0 +1,113 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Materials Zone files parsers API",
+    "version": "2.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "parsers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get all parsers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.materials.zone/v2beta1/parsers"
+          },
+          "docs": "Get all parsers accessible to this user's organization."
+        },
+        {
+          "info": {
+            "name": "Create a new parser",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.materials.zone/v2beta1/parsers",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new parser."
+        },
+        {
+          "info": {
+            "name": "Get a parser",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.materials.zone/v2beta1/parsers/:parserId",
+            "params": [
+              {
+                "name": "parserId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the parser to get."
+              }
+            ]
+          },
+          "docs": "Gets a parser's configuration."
+        },
+        {
+          "info": {
+            "name": "Update a parser",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.materials.zone/v2beta1/parsers/:parserId",
+            "params": [
+              {
+                "name": "parserId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the parser to update."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates an existing parser."
+        },
+        {
+          "info": {
+            "name": "Delete a parser",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.materials.zone/v2beta1/parsers/:parserId",
+            "params": [
+              {
+                "name": "parserId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the parser to delete."
+              }
+            ]
+          },
+          "docs": "Deletes a parser."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

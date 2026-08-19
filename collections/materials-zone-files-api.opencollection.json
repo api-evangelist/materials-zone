@@ -1,0 +1,45 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Materials Zone files API",
+    "version": "2.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "files",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a file",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.materials.zone/v2beta1/files/:code",
+            "params": [
+              {
+                "name": "code",
+                "value": "file-code",
+                "type": "path",
+                "description": "The code of the file."
+              }
+            ]
+          },
+          "docs": "This operation retrieves file information."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,213 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Materials Zone files tables API",
+    "version": "2.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "tables",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get all tables",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.materials.zone/v2beta1/tables"
+          },
+          "docs": "This operation retrieves all tables that are accessible to the user."
+        },
+        {
+          "info": {
+            "name": "Create a new table",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.materials.zone/v2beta1/tables",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new table within a specified folder or within the root folder."
+        },
+        {
+          "info": {
+            "name": "Get a single table",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.materials.zone/v2beta1/tables/:tableId",
+            "params": [
+              {
+                "name": "tableId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the table to return."
+              }
+            ]
+          },
+          "docs": "This operation retrieves a single table."
+        },
+        {
+          "info": {
+            "name": "Update a table",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.materials.zone/v2beta1/tables/:tableId",
+            "params": [
+              {
+                "name": "tableId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the table to update."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a table's title, description, parent folder, etc."
+        },
+        {
+          "info": {
+            "name": "Delete a table",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.materials.zone/v2beta1/tables/:tableId",
+            "params": [
+              {
+                "name": "tableId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the table to delete."
+              }
+            ]
+          },
+          "docs": "Delete a table and all its contents."
+        },
+        {
+          "info": {
+            "name": "Get all items from a table",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.materials.zone/v2beta1/tables/:tableId/items",
+            "params": [
+              {
+                "name": "tableId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the table to fetch the items from."
+              },
+              {
+                "name": "cursor",
+                "value": "eyJpbnNlcnRPcmRlciI6IjEyMyIsInBhcmFtIjoiZGFnX21hbHVhY2giLCJ2YWx1ZSI6IjEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4In0=",
+                "type": "query",
+                "description": "Cursor for pagination to fetch the next set of results."
+              },
+              {
+                "name": "pageSize",
+                "value": "100",
+                "type": "query",
+                "description": "The number of items to return in a single page."
+              }
+            ]
+          },
+          "docs": "This operation retrieves all items from a single table. See [Pagination](#overview--pagination) example."
+        },
+        {
+          "info": {
+            "name": "Create a new item in a table",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.materials.zone/v2beta1/tables/:tableId/items",
+            "params": [
+              {
+                "name": "tableId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the table to create the item in."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "This operation creates a new item in a table."
+        },
+        {
+          "info": {
+            "name": "Create multiple items in a table",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.materials.zone/v2beta1/tables/:tableId/items/batch",
+            "params": [
+              {
+                "name": "tableId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the table to create the items in."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "This operation creates multiple items in a single table."
+        },
+        {
+          "info": {
+            "name": "Update multiple items in a table",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.materials.zone/v2beta1/tables/:tableId/items/batch",
+            "params": [
+              {
+                "name": "tableId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the table that owns the items."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "This operation updates multiple items in a single table."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

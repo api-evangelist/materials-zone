@@ -1,0 +1,2003 @@
+{
+  "item": [
+    {
+      "id": "de46c85c-968a-43f0-a9e5-811a5d46e334",
+      "name": "tables",
+      "description": {
+        "content": "Tables are organized in folders, and contain Items.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f360a07e-f4e4-4610-83be-eb1b7ef44403",
+          "name": "Get all tables",
+          "request": {
+            "name": "Get all tables",
+            "description": {
+              "content": "This operation retrieves all tables that are accessible to the user.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tables"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bf51dd03-7a58-4b51-aa1a-c7eaa07303ec",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": \"074658ef-a6c2-9b4b-129b-630ee72d2b5e\",\n      \"title\": \"Material Properties\",\n      \"description\": \"This table contains items with material properties.\",\n      \"folderId\": \"bf3ae346-2089-01ec-f895-235880c73276\",\n      \"protocols\": [\n        {\n          \"description\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"hash\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"id\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameters\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"title\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"type\": \"PROTOCOL\",\n          \"unit\": null\n        },\n        {\n          \"description\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"hash\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"id\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameters\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"title\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"type\": \"PROTOCOL\",\n          \"unit\": null\n        }\n      ],\n      \"hash\": \"string\"\n    },\n    {\n      \"id\": \"d09d4b46-3ee2-090a-64c1-bb95c526bdcb\",\n      \"title\": \"Material Properties\",\n      \"description\": \"This table contains items with material properties.\",\n      \"folderId\": \"71100b03-45f7-0785-89d8-e7361efd1deb\",\n      \"protocols\": [\n        {\n          \"description\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"hash\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"id\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameters\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"title\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"type\": \"PROTOCOL\",\n          \"unit\": null\n        },\n        {\n          \"description\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"hash\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"id\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameters\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"title\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"type\": \"PROTOCOL\",\n          \"unit\": null\n        }\n      ],\n      \"hash\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ca0940d4-1fba-4c0d-bb0c-535af1558c14",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "35dc2c0a-a953-4267-afd9-6f4f020ed170",
+          "name": "Create a new table",
+          "request": {
+            "name": "Create a new table",
+            "description": {
+              "content": "Create a new table within a specified folder or within the root folder.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tables"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"folderId\": \"<uuid>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5811dbca-b42b-4bba-86ac-0edbf14a7bd5",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Material Properties\",\n  \"description\": \"This table contains items with material properties.\",\n  \"folderId\": \"<uuid>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"id\": \"14097243-4fa0-b0ea-d204-6975a7623d44\",\n    \"title\": \"Material Properties\",\n    \"description\": \"This table contains items with material properties.\",\n    \"folderId\": \"c761f579-2e7f-dad2-7e30-d73276e40c5b\",\n    \"protocols\": [\n      {\n        \"description\": \"This protocol contains parameters representing the measurement conditions.\",\n        \"hash\": \"string\",\n        \"id\": \"ec2627b1-635d-2683-33a8-53bdeaf94e4f\",\n        \"parameters\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"title\": \"Measured properties\",\n        \"type\": \"PROTOCOL\",\n        \"unit\": null\n      },\n      {\n        \"description\": \"This protocol contains parameters representing the measurement conditions.\",\n        \"hash\": \"string\",\n        \"id\": \"ad45455b-c693-abde-2842-95610bdf7c90\",\n        \"parameters\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"title\": \"Measured properties\",\n        \"type\": \"PROTOCOL\",\n        \"unit\": null\n      }\n    ],\n    \"hash\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "20060da5-f2d5-4a6a-99db-b42106c7494c",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Material Properties\",\n  \"description\": \"This table contains items with material properties.\",\n  \"folderId\": \"<uuid>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6229bf50-3c24-4eb8-8151-aab98f365b1e",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Material Properties\",\n  \"description\": \"This table contains items with material properties.\",\n  \"folderId\": \"<uuid>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1e983f85-7a05-4625-a103-931f9cac7c6b",
+          "name": "Get a single table",
+          "request": {
+            "name": "Get a single table",
+            "description": {
+              "content": "This operation retrieves a single table.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tables",
+                ":tableId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "tableId",
+                  "description": "(Required) The UUID of the table to return."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f1ed47f8-fbbe-4b49-a5c2-246643a1cc76",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to return."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"id\": \"14097243-4fa0-b0ea-d204-6975a7623d44\",\n    \"title\": \"Material Properties\",\n    \"description\": \"This table contains items with material properties.\",\n    \"folderId\": \"c761f579-2e7f-dad2-7e30-d73276e40c5b\",\n    \"protocols\": [\n      {\n        \"description\": \"This protocol contains parameters representing the measurement conditions.\",\n        \"hash\": \"string\",\n        \"id\": \"ec2627b1-635d-2683-33a8-53bdeaf94e4f\",\n        \"parameters\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"title\": \"Measured properties\",\n        \"type\": \"PROTOCOL\",\n        \"unit\": null\n      },\n      {\n        \"description\": \"This protocol contains parameters representing the measurement conditions.\",\n        \"hash\": \"string\",\n        \"id\": \"ad45455b-c693-abde-2842-95610bdf7c90\",\n        \"parameters\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"title\": \"Measured properties\",\n        \"type\": \"PROTOCOL\",\n        \"unit\": null\n      }\n    ],\n    \"hash\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fa0ab3dc-5940-436d-a11c-e6d5fe503039",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to return."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "89893159-aac0-49b3-ba52-a38e3c393aa7",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to return."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "03f77adc-4337-4048-8601-bf228b9d4523",
+          "name": "Update a table",
+          "request": {
+            "name": "Update a table",
+            "description": {
+              "content": "Update a table's title, description, parent folder, etc.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tables",
+                ":tableId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "tableId",
+                  "description": "(Required) The UUID of the table to update."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"hash\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"folderId\": \"<uuid>\",\n  \"tableProtocolIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d4f12295-c953-4a72-93df-3ccc585f82f3",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to update."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"hash\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"folderId\": \"<uuid>\",\n  \"tableProtocolIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"id\": \"14097243-4fa0-b0ea-d204-6975a7623d44\",\n    \"title\": \"Material Properties\",\n    \"description\": \"This table contains items with material properties.\",\n    \"folderId\": \"c761f579-2e7f-dad2-7e30-d73276e40c5b\",\n    \"protocols\": [\n      {\n        \"description\": \"This protocol contains parameters representing the measurement conditions.\",\n        \"hash\": \"string\",\n        \"id\": \"ec2627b1-635d-2683-33a8-53bdeaf94e4f\",\n        \"parameters\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"title\": \"Measured properties\",\n        \"type\": \"PROTOCOL\",\n        \"unit\": null\n      },\n      {\n        \"description\": \"This protocol contains parameters representing the measurement conditions.\",\n        \"hash\": \"string\",\n        \"id\": \"ad45455b-c693-abde-2842-95610bdf7c90\",\n        \"parameters\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"title\": \"Measured properties\",\n        \"type\": \"PROTOCOL\",\n        \"unit\": null\n      }\n    ],\n    \"hash\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "93d3a123-ea0f-4f90-be16-ae864faa0f69",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to update."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"hash\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"folderId\": \"<uuid>\",\n  \"tableProtocolIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a48dce6c-095c-4712-b5f1-bd9410fe5ced",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to update."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"hash\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"folderId\": \"<uuid>\",\n  \"tableProtocolIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c011aece-7374-4e39-9449-c61f52abbe96",
+              "name": "Conflict - The table has been modified since you last retrieved it",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to update."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"hash\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"folderId\": \"<uuid>\",\n  \"tableProtocolIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "111a33de-071d-4aa2-a1cb-344334d19ac7",
+          "name": "Delete a table",
+          "request": {
+            "name": "Delete a table",
+            "description": {
+              "content": "Delete a table and all its contents.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tables",
+                ":tableId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "tableId",
+                  "description": "(Required) The UUID of the table to delete."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6dc5765a-4af1-4dbd-9d58-9bda5325726b",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to delete."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "69311fa4-b024-4836-9866-7f4d56c1ef8a",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to delete."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3035b208-883c-44a9-a2ea-d81f56047e2a",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to delete."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7dd9b8d6-3c7e-4bf3-8ef7-2f5b21e407f3",
+          "name": "Get all items from a table",
+          "request": {
+            "name": "Get all items from a table",
+            "description": {
+              "content": "This operation retrieves all items from a single table. See [Pagination](#overview--pagination) example.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tables",
+                ":tableId",
+                "items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "Cursor for pagination to fetch the next set of results."
+                },
+                {
+                  "disabled": false,
+                  "key": "pageSize",
+                  "value": "100",
+                  "description": "The number of items to return in a single page."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "tableId",
+                  "description": "(Required) The UUID of the table to fetch the items from."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "82ace7ad-fcae-437d-9c38-44bdd9721acc",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "eyJpbnNlcnRPcmRlciI6IjEyMyIsInBhcmFtIjoiZGFnX21hbHVhY2giLCJ2YWx1ZSI6IjEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4In0="
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "100"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to fetch the items from."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"pagination\": {\n      \"endCursor\": \"string\",\n      \"startCursor\": \"string\",\n      \"hasNextPage\": true\n    },\n    \"data\": [\n      {\n        \"code\": \"AA-123\",\n        \"dateCreated\": \"1996-03-27T15:40:29.250Z\",\n        \"dateUpdated\": \"1979-07-31T01:29:36.214Z\",\n        \"dateTime\": \"1986-10-01T04:30:32.746Z\",\n        \"id\": \"70591fc2-a868-07e4-eddf-3e8625fbe909\",\n        \"tableId\": \"890fdb6b-1b52-2bd4-13ef-906f77dfb239\",\n        \"title\": \"Aluminum\",\n        \"description\": \"This item contains the chemical properties of Aluminum.\",\n        \"values\": [\n          {\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"parameterId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"formulationProtocolId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"formulationItemId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"parameterId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"formulationProtocolId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"formulationItemId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"measurements\": [\n          {\n            \"id\": \"string\",\n            \"dateCreated\": \"1999-02-10T02:50:56.426Z\",\n            \"dateUpdated\": \"1998-06-17T13:54:32.709Z\",\n            \"title\": \"string\",\n            \"description\": \"string\",\n            \"parserCode\": \"string\",\n            \"rawFilename\": \"string\",\n            \"rawFilDownloadURL\": \"string\"\n          },\n          {\n            \"id\": \"string\",\n            \"dateCreated\": \"1991-10-29T08:11:05.169Z\",\n            \"dateUpdated\": \"2008-09-01T14:39:42.918Z\",\n            \"title\": \"string\",\n            \"description\": \"string\",\n            \"parserCode\": \"string\",\n            \"rawFilename\": \"string\",\n            \"rawFilDownloadURL\": \"string\"\n          }\n        ]\n      },\n      {\n        \"code\": \"AA-123\",\n        \"dateCreated\": \"1960-04-01T11:15:30.516Z\",\n        \"dateUpdated\": \"1970-03-09T20:23:27.457Z\",\n        \"dateTime\": \"1965-02-25T22:39:17.793Z\",\n        \"id\": \"3c5a206b-4399-5194-1d65-af88b5e62f9f\",\n        \"tableId\": \"8430f0e3-a682-d944-9ddb-8c8ed88487d3\",\n        \"title\": \"Aluminum\",\n        \"description\": \"This item contains the chemical properties of Aluminum.\",\n        \"values\": [\n          {\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"parameterId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"formulationProtocolId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"formulationItemId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"parameterId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"formulationProtocolId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"formulationItemId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"measurements\": [\n          {\n            \"id\": \"string\",\n            \"dateCreated\": \"2012-04-01T21:11:57.388Z\",\n            \"dateUpdated\": \"1964-02-03T20:40:55.022Z\",\n            \"title\": \"string\",\n            \"description\": \"string\",\n            \"parserCode\": \"string\",\n            \"rawFilename\": \"string\",\n            \"rawFilDownloadURL\": \"string\"\n          },\n          {\n            \"id\": \"string\",\n            \"dateCreated\": \"1995-05-05T06:09:09.357Z\",\n            \"dateUpdated\": \"1989-07-05T09:36:51.901Z\",\n            \"title\": \"string\",\n            \"description\": \"string\",\n            \"parserCode\": \"string\",\n            \"rawFilename\": \"string\",\n            \"rawFilDownloadURL\": \"string\"\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5f1ab8eb-b263-4abc-afaf-466ac62cb917",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "eyJpbnNlcnRPcmRlciI6IjEyMyIsInBhcmFtIjoiZGFnX21hbHVhY2giLCJ2YWx1ZSI6IjEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4In0="
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "100"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to fetch the items from."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6f0180a6-30f2-4a95-b9af-1e44f04ad364",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "eyJpbnNlcnRPcmRlciI6IjEyMyIsInBhcmFtIjoiZGFnX21hbHVhY2giLCJ2YWx1ZSI6IjEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4In0="
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "100"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to fetch the items from."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "317b36f1-39e6-4746-b517-4f57138bec18",
+          "name": "Create a new item in a table",
+          "request": {
+            "name": "Create a new item in a table",
+            "description": {
+              "content": "This operation creates a new item in a table.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tables",
+                ":tableId",
+                "items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "tableId",
+                  "description": "(Required) The UUID of the table to create the item in."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"<string>\",\n  \"dateTime\": \"<dateTime>\",\n  \"description\": \"<string>\",\n  \"values\": [\n    {\n      \"value\": \"<string>\",\n      \"parameterId\": \"<uuid>\",\n      \"formulationProtocolId\": \"<uuid>\",\n      \"formulationItemId\": \"<uuid>\"\n    },\n    {\n      \"value\": \"<string>\",\n      \"parameterId\": \"<uuid>\",\n      \"formulationProtocolId\": \"<uuid>\",\n      \"formulationItemId\": \"<uuid>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ed652c1e-fefa-4134-8f17-cc37443d31c8",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to create the item in."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Aluminum\",\n  \"dateTime\": \"<dateTime>\",\n  \"description\": \"This item contains the chemical properties of Aluminum.\",\n  \"values\": [\n    {\n      \"value\": \"1\",\n      \"parameterId\": \"328c1344-d913-53b2-0532-a7cdba6c7066\",\n      \"formulationProtocolId\": \"b2588926-4f49-26ee-3188-542bb26f1f38\",\n      \"formulationItemId\": \"d1c7eff1-1831-a2b1-e2e0-c12c3eba374c\"\n    },\n    {\n      \"value\": \"1\",\n      \"parameterId\": \"16057e1d-5d77-f08f-fe7e-d809af5664cb\",\n      \"formulationProtocolId\": \"507d6f00-4c55-ac21-aac4-7070861e7c91\",\n      \"formulationItemId\": \"1ef4e68c-01b6-5b28-d08e-f65b2734bc4f\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"code\": \"AA-123\",\n    \"dateCreated\": \"1988-12-21T11:30:20.539Z\",\n    \"dateUpdated\": \"1960-09-30T17:31:00.089Z\",\n    \"dateTime\": \"1952-08-04T16:08:17.502Z\",\n    \"id\": \"9a1dab97-c4de-13cd-f153-83ec8b28426d\",\n    \"tableId\": \"5cb27dc1-a251-287e-efc8-eaae9b6768f5\",\n    \"title\": \"Aluminum\",\n    \"description\": \"This item contains the chemical properties of Aluminum.\",\n    \"values\": [\n      {\n        \"value\": \"1\",\n        \"parameterId\": \"6a77cfe2-1bb4-1a97-4408-a0cbcfb7f5af\",\n        \"formulationProtocolId\": \"81d3a2a8-8a44-306e-f5de-a22062e0b303\",\n        \"formulationItemId\": \"555eea9f-5ef1-dcd1-f199-053d8f522443\"\n      },\n      {\n        \"value\": \"1\",\n        \"parameterId\": \"71db1887-9805-fa2c-a1f7-4c904f469f5f\",\n        \"formulationProtocolId\": \"ad89ef2b-f31c-186b-8a69-ad365ff3823d\",\n        \"formulationItemId\": \"d5d62744-4edb-6f42-5015-cff14a754e60\"\n      }\n    ],\n    \"measurements\": [\n      {\n        \"id\": \"string\",\n        \"dateCreated\": \"2014-12-04T20:45:01.945Z\",\n        \"dateUpdated\": \"1961-08-13T06:56:31.857Z\",\n        \"title\": \"string\",\n        \"description\": \"string\",\n        \"parserCode\": \"string\",\n        \"rawFilename\": \"string\",\n        \"rawFilDownloadURL\": \"string\"\n      },\n      {\n        \"id\": \"string\",\n        \"dateCreated\": \"1976-03-25T17:12:41.734Z\",\n        \"dateUpdated\": \"1953-03-24T16:37:06.745Z\",\n        \"title\": \"string\",\n        \"description\": \"string\",\n        \"parserCode\": \"string\",\n        \"rawFilename\": \"string\",\n        \"rawFilDownloadURL\": \"string\"\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6978c630-2f49-485d-8c3e-2c915d507328",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to create the item in."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Aluminum\",\n  \"dateTime\": \"<dateTime>\",\n  \"description\": \"This item contains the chemical properties of Aluminum.\",\n  \"values\": [\n    {\n      \"value\": \"1\",\n      \"parameterId\": \"328c1344-d913-53b2-0532-a7cdba6c7066\",\n      \"formulationProtocolId\": \"b2588926-4f49-26ee-3188-542bb26f1f38\",\n      \"formulationItemId\": \"d1c7eff1-1831-a2b1-e2e0-c12c3eba374c\"\n    },\n    {\n      \"value\": \"1\",\n      \"parameterId\": \"16057e1d-5d77-f08f-fe7e-d809af5664cb\",\n      \"formulationProtocolId\": \"507d6f00-4c55-ac21-aac4-7070861e7c91\",\n      \"formulationItemId\": \"1ef4e68c-01b6-5b28-d08e-f65b2734bc4f\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9e1c28a5-3e74-4395-8441-82d4d88e26e9",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to create the item in."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Aluminum\",\n  \"dateTime\": \"<dateTime>\",\n  \"description\": \"This item contains the chemical properties of Aluminum.\",\n  \"values\": [\n    {\n      \"value\": \"1\",\n      \"parameterId\": \"328c1344-d913-53b2-0532-a7cdba6c7066\",\n      \"formulationProtocolId\": \"b2588926-4f49-26ee-3188-542bb26f1f38\",\n      \"formulationItemId\": \"d1c7eff1-1831-a2b1-e2e0-c12c3eba374c\"\n    },\n    {\n      \"value\": \"1\",\n      \"parameterId\": \"16057e1d-5d77-f08f-fe7e-d809af5664cb\",\n      \"formulationProtocolId\": \"507d6f00-4c55-ac21-aac4-7070861e7c91\",\n      \"formulationItemId\": \"1ef4e68c-01b6-5b28-d08e-f65b2734bc4f\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9ea1c1d0-452a-441b-9f7f-8c9f2fb63d20",
+          "name": "Create multiple items in a table",
+          "request": {
+            "name": "Create multiple items in a table",
+            "description": {
+              "content": "This operation creates multiple items in a single table.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tables",
+                ":tableId",
+                "items",
+                "batch"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "tableId",
+                  "description": "(Required) The UUID of the table to create the items in."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"items\": [\n    {\n      \"title\": \"<string>\",\n      \"dateTime\": \"<dateTime>\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"parameterId\": \"<uuid>\",\n          \"formulationProtocolId\": \"<uuid>\",\n          \"formulationItemId\": \"<uuid>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"parameterId\": \"<uuid>\",\n          \"formulationProtocolId\": \"<uuid>\",\n          \"formulationItemId\": \"<uuid>\"\n        }\n      ]\n    },\n    {\n      \"title\": \"<string>\",\n      \"dateTime\": \"<dateTime>\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"parameterId\": \"<uuid>\",\n          \"formulationProtocolId\": \"<uuid>\",\n          \"formulationItemId\": \"<uuid>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"parameterId\": \"<uuid>\",\n          \"formulationProtocolId\": \"<uuid>\",\n          \"formulationItemId\": \"<uuid>\"\n        }\n      ]\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e196d434-9f07-4070-99f3-0e0078a2e89f",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId",
+                    "items",
+                    "batch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to create the items in."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"items\": [\n    {\n      \"title\": \"Aluminum\",\n      \"dateTime\": \"1949-09-10T05:47:51.612Z\",\n      \"description\": \"This item contains the chemical properties of Aluminum.\",\n      \"values\": [\n        {\n          \"value\": \"1\",\n          \"parameterId\": \"0cbe366e-1acd-26b6-b712-8cceea36a7e3\",\n          \"formulationProtocolId\": \"ab4e356e-0af4-2206-629e-29901a329a0a\",\n          \"formulationItemId\": \"0fb00ef8-6483-6c76-8939-dc9c85c13ed0\"\n        },\n        {\n          \"value\": \"1\",\n          \"parameterId\": \"bb703083-4536-428b-6f54-2bc85965a37c\",\n          \"formulationProtocolId\": \"29fda851-5782-8357-79b0-058cdd803861\",\n          \"formulationItemId\": \"7bcd174d-9abd-07e1-da51-3dc090c3cf37\"\n        }\n      ]\n    },\n    {\n      \"title\": \"Aluminum\",\n      \"dateTime\": \"1975-10-21T11:51:51.319Z\",\n      \"description\": \"This item contains the chemical properties of Aluminum.\",\n      \"values\": [\n        {\n          \"value\": \"1\",\n          \"parameterId\": \"9f4457e7-2098-240a-d8f8-d3404aa0d0e7\",\n          \"formulationProtocolId\": \"9d4f9555-c163-b979-978e-9ceb3ae3b714\",\n          \"formulationItemId\": \"1521dbf7-27a7-d950-7d7d-a0dc166d3c0f\"\n        },\n        {\n          \"value\": \"1\",\n          \"parameterId\": \"40cbaf74-a8b0-349c-b403-bbebc0edf6e4\",\n          \"formulationProtocolId\": \"1927aab2-72d5-bf46-b074-f01d96fe3f2a\",\n          \"formulationItemId\": \"4e9ef1f3-d19c-3d0d-5b04-5954ab6cccb9\"\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": \"be387237-dd2c-48fd-38fb-0e23655b02b5\",\n      \"code\": \"string\",\n      \"action\": \"UPDATED\"\n    },\n    {\n      \"id\": \"382d637f-57b4-db0c-da6f-a96be05b89b3\",\n      \"code\": \"string\",\n      \"action\": \"CREATED\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f1d7483f-faa6-4adc-aa2b-89dcb5088075",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId",
+                    "items",
+                    "batch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to create the items in."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"items\": [\n    {\n      \"title\": \"Aluminum\",\n      \"dateTime\": \"1949-09-10T05:47:51.612Z\",\n      \"description\": \"This item contains the chemical properties of Aluminum.\",\n      \"values\": [\n        {\n          \"value\": \"1\",\n          \"parameterId\": \"0cbe366e-1acd-26b6-b712-8cceea36a7e3\",\n          \"formulationProtocolId\": \"ab4e356e-0af4-2206-629e-29901a329a0a\",\n          \"formulationItemId\": \"0fb00ef8-6483-6c76-8939-dc9c85c13ed0\"\n        },\n        {\n          \"value\": \"1\",\n          \"parameterId\": \"bb703083-4536-428b-6f54-2bc85965a37c\",\n          \"formulationProtocolId\": \"29fda851-5782-8357-79b0-058cdd803861\",\n          \"formulationItemId\": \"7bcd174d-9abd-07e1-da51-3dc090c3cf37\"\n        }\n      ]\n    },\n    {\n      \"title\": \"Aluminum\",\n      \"dateTime\": \"1975-10-21T11:51:51.319Z\",\n      \"description\": \"This item contains the chemical properties of Aluminum.\",\n      \"values\": [\n        {\n          \"value\": \"1\",\n          \"parameterId\": \"9f4457e7-2098-240a-d8f8-d3404aa0d0e7\",\n          \"formulationProtocolId\": \"9d4f9555-c163-b979-978e-9ceb3ae3b714\",\n          \"formulationItemId\": \"1521dbf7-27a7-d950-7d7d-a0dc166d3c0f\"\n        },\n        {\n          \"value\": \"1\",\n          \"parameterId\": \"40cbaf74-a8b0-349c-b403-bbebc0edf6e4\",\n          \"formulationProtocolId\": \"1927aab2-72d5-bf46-b074-f01d96fe3f2a\",\n          \"formulationItemId\": \"4e9ef1f3-d19c-3d0d-5b04-5954ab6cccb9\"\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "fa53b7d3-6848-4f9b-88af-2c6364acfcfb",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId",
+                    "items",
+                    "batch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to create the items in."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"items\": [\n    {\n      \"title\": \"Aluminum\",\n      \"dateTime\": \"1949-09-10T05:47:51.612Z\",\n      \"description\": \"This item contains the chemical properties of Aluminum.\",\n      \"values\": [\n        {\n          \"value\": \"1\",\n          \"parameterId\": \"0cbe366e-1acd-26b6-b712-8cceea36a7e3\",\n          \"formulationProtocolId\": \"ab4e356e-0af4-2206-629e-29901a329a0a\",\n          \"formulationItemId\": \"0fb00ef8-6483-6c76-8939-dc9c85c13ed0\"\n        },\n        {\n          \"value\": \"1\",\n          \"parameterId\": \"bb703083-4536-428b-6f54-2bc85965a37c\",\n          \"formulationProtocolId\": \"29fda851-5782-8357-79b0-058cdd803861\",\n          \"formulationItemId\": \"7bcd174d-9abd-07e1-da51-3dc090c3cf37\"\n        }\n      ]\n    },\n    {\n      \"title\": \"Aluminum\",\n      \"dateTime\": \"1975-10-21T11:51:51.319Z\",\n      \"description\": \"This item contains the chemical properties of Aluminum.\",\n      \"values\": [\n        {\n          \"value\": \"1\",\n          \"parameterId\": \"9f4457e7-2098-240a-d8f8-d3404aa0d0e7\",\n          \"formulationProtocolId\": \"9d4f9555-c163-b979-978e-9ceb3ae3b714\",\n          \"formulationItemId\": \"1521dbf7-27a7-d950-7d7d-a0dc166d3c0f\"\n        },\n        {\n          \"value\": \"1\",\n          \"parameterId\": \"40cbaf74-a8b0-349c-b403-bbebc0edf6e4\",\n          \"formulationProtocolId\": \"1927aab2-72d5-bf46-b074-f01d96fe3f2a\",\n          \"formulationItemId\": \"4e9ef1f3-d19c-3d0d-5b04-5954ab6cccb9\"\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8ad00c1b-fb3e-44c1-9e19-4628326e4228",
+          "name": "Update multiple items in a table",
+          "request": {
+            "name": "Update multiple items in a table",
+            "description": {
+              "content": "This operation updates multiple items in a single table.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tables",
+                ":tableId",
+                "items",
+                "batch"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "tableId",
+                  "description": "(Required) The UUID of the table that owns the items."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"items\": [\n    {\n      \"id\": \"<uuid>\",\n      \"dateTime\": \"<dateTime>\",\n      \"description\": \"<string>\",\n      \"title\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameterId\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"formulationProtocolId\": \"<uuid>\",\n          \"formulationItemId\": \"<uuid>\"\n        },\n        {\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameterId\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"formulationProtocolId\": \"<uuid>\",\n          \"formulationItemId\": \"<uuid>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<uuid>\",\n      \"dateTime\": \"<dateTime>\",\n      \"description\": \"<string>\",\n      \"title\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameterId\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"formulationProtocolId\": \"<uuid>\",\n          \"formulationItemId\": \"<uuid>\"\n        },\n        {\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameterId\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"formulationProtocolId\": \"<uuid>\",\n          \"formulationItemId\": \"<uuid>\"\n        }\n      ]\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "44947d6a-2906-4b53-9fd7-1b333d4c2cde",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId",
+                    "items",
+                    "batch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table that owns the items."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"items\": [\n    {\n      \"id\": \"60999627-37bb-b309-f491-1476120e1f9b\",\n      \"dateTime\": \"1953-09-03T08:40:54.087Z\",\n      \"description\": \"This item contains the chemical properties of Aluminum.\",\n      \"title\": \"Aluminum\",\n      \"values\": [\n        {\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameterId\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"formulationProtocolId\": \"648e98bd-6a14-e8f4-3acd-156be5f96177\",\n          \"formulationItemId\": \"0f5e5379-5ef7-9a68-f994-13ed1299fd25\"\n        },\n        {\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameterId\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"formulationProtocolId\": \"23eafed9-0844-4ee3-6ba4-8638e8da593a\",\n          \"formulationItemId\": \"03af15cf-ef0f-889d-e5eb-1be37bc93aaf\"\n        }\n      ]\n    },\n    {\n      \"id\": \"0a773c74-f2c3-7894-e255-7c1fafada7e8\",\n      \"dateTime\": \"1968-07-14T19:09:28.624Z\",\n      \"description\": \"This item contains the chemical properties of Aluminum.\",\n      \"title\": \"Aluminum\",\n      \"values\": [\n        {\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameterId\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"formulationProtocolId\": \"169ce963-5a7c-fc2b-40b9-d20bc41d63c1\",\n          \"formulationItemId\": \"423df7fe-07ab-9e4c-ac16-18773579dc77\"\n        },\n        {\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameterId\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"formulationProtocolId\": \"fa40c779-86bb-f400-f7a6-a8b31e2c626e\",\n          \"formulationItemId\": \"2d661c22-ac9d-4737-4d58-9ce046a9f20b\"\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": \"be387237-dd2c-48fd-38fb-0e23655b02b5\",\n      \"code\": \"string\",\n      \"action\": \"UPDATED\"\n    },\n    {\n      \"id\": \"382d637f-57b4-db0c-da6f-a96be05b89b3\",\n      \"code\": \"string\",\n      \"action\": \"CREATED\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "00deffa9-37a8-458e-bf8b-f0ad8d012602",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId",
+                    "items",
+                    "batch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table that owns the items."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"items\": [\n    {\n      \"id\": \"60999627-37bb-b309-f491-1476120e1f9b\",\n      \"dateTime\": \"1953-09-03T08:40:54.087Z\",\n      \"description\": \"This item contains the chemical properties of Aluminum.\",\n      \"title\": \"Aluminum\",\n      \"values\": [\n        {\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameterId\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"formulationProtocolId\": \"648e98bd-6a14-e8f4-3acd-156be5f96177\",\n          \"formulationItemId\": \"0f5e5379-5ef7-9a68-f994-13ed1299fd25\"\n        },\n        {\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameterId\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"formulationProtocolId\": \"23eafed9-0844-4ee3-6ba4-8638e8da593a\",\n          \"formulationItemId\": \"03af15cf-ef0f-889d-e5eb-1be37bc93aaf\"\n        }\n      ]\n    },\n    {\n      \"id\": \"0a773c74-f2c3-7894-e255-7c1fafada7e8\",\n      \"dateTime\": \"1968-07-14T19:09:28.624Z\",\n      \"description\": \"This item contains the chemical properties of Aluminum.\",\n      \"title\": \"Aluminum\",\n      \"values\": [\n        {\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameterId\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"formulationProtocolId\": \"169ce963-5a7c-fc2b-40b9-d20bc41d63c1\",\n          \"formulationItemId\": \"423df7fe-07ab-9e4c-ac16-18773579dc77\"\n        },\n        {\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameterId\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"formulationProtocolId\": \"fa40c779-86bb-f400-f7a6-a8b31e2c626e\",\n          \"formulationItemId\": \"2d661c22-ac9d-4737-4d58-9ce046a9f20b\"\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "57269ef4-c3f0-444f-ace7-816fa5abd70a",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId",
+                    "items",
+                    "batch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table that owns the items."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"items\": [\n    {\n      \"id\": \"60999627-37bb-b309-f491-1476120e1f9b\",\n      \"dateTime\": \"1953-09-03T08:40:54.087Z\",\n      \"description\": \"This item contains the chemical properties of Aluminum.\",\n      \"title\": \"Aluminum\",\n      \"values\": [\n        {\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameterId\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"formulationProtocolId\": \"648e98bd-6a14-e8f4-3acd-156be5f96177\",\n          \"formulationItemId\": \"0f5e5379-5ef7-9a68-f994-13ed1299fd25\"\n        },\n        {\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameterId\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"formulationProtocolId\": \"23eafed9-0844-4ee3-6ba4-8638e8da593a\",\n          \"formulationItemId\": \"03af15cf-ef0f-889d-e5eb-1be37bc93aaf\"\n        }\n      ]\n    },\n    {\n      \"id\": \"0a773c74-f2c3-7894-e255-7c1fafada7e8\",\n      \"dateTime\": \"1968-07-14T19:09:28.624Z\",\n      \"description\": \"This item contains the chemical properties of Aluminum.\",\n      \"title\": \"Aluminum\",\n      \"values\": [\n        {\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameterId\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"formulationProtocolId\": \"169ce963-5a7c-fc2b-40b9-d20bc41d63c1\",\n          \"formulationItemId\": \"423df7fe-07ab-9e4c-ac16-18773579dc77\"\n        },\n        {\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"parameterId\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"formulationProtocolId\": \"fa40c779-86bb-f400-f7a6-a8b31e2c626e\",\n          \"formulationItemId\": \"2d661c22-ac9d-4737-4d58-9ce046a9f20b\"\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.materials.zone/v2beta1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "0d0ebd99-2301-494d-8813-c69153a83ee4",
+    "name": "Materials Zone files tables API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "MaterialsZone's RESTful API is designed to facilitate seamless integration with your existing systems, enabling you to automate workflows, connect diverse data sources, and perform domain-specific analysis. With a straightforward, predictable URL structure and support for standard HTTP methods (POST, GET, PUT, DELETE), our API is built for ease of use and flexibility.\n\n> 💡 **API Examples Repository**: Check out our [MaterialsZone API Examples](https://github.com/materialscloud/materials-zone-api-examples) repository for practical Python code samples demonstrating how to use the API for various use cases.\n\n# Authentication and Security\n\nEach user within the organization can request a private API key, ensuring secure authentication and enabling an audit trail. API keys can be rotated upon request at any desired frequency. The API key is provided in the header of each request, as explained in the \"Getting Started\" section below. \n\nAll data stored in MaterialsZone is securely segregated, ensuring your organization's information remains isolated and protected. Permissions within the organization can be managed using MaterialsZone's permission system to control access to specific data.\n\nData is encrypted both in transit and at rest, ensuring that all communication with our API is secure and that stored data is safeguarded against unauthorized access.\n\n# Getting Started\n\nMaterialsZone's API provides access to resources via structured URI paths. The API uses the standard HTTP methods like GET, POST, PUT, and DELETE and uses the JSON format for the payload and response of the requests. Each resource and its available operations are described in detail in the sections below.\n\nThe URI of every request consists of the domain `https://api.materials.zone`, the path of the endpoint prefixed by the version of the API, and the API key passed as a header `authorization`. In addition, some endpoints may require passing a path parameter and a payload in JSON format. Requests can be made using the command line tool CURL, Python's `requests` library or any other method.\n\n# Understanding the Entities of MaterialsZone\n\nWhen working with the MaterialsZone API, you’re not just dealing with technical data structures — you’re managing your own materials data in a way that mirrors your real-world workflows. Let’s walk through the key **entities** of the platform, from a user’s perspective.\n\n## Organizing with Folders and Tables\n\nYour workspace starts with **folders**. Think of them like project directories — you can use them to group **tables** based on product lines, sites, experiments, or organizational teams. Folders can even contain other folders, allowing you to build a clear, navigable hierarchy.\n\nInside each folder, you'll place **tables**. Each table is a structured dataset — for example, a table of raw materials or a table of experiments. Tables define the structure of your data and store the actual records (called **items**).\n\n## Capturing Data with Items, Parameters, and Values\n\nEach row in a table is called an **item**. For instance:\n- An item in your \"Raw Materials\" table might represent a specific grade of aluminum.\n- An item in your \"Experiments\" table could describe one formulation you tested.\n\nThe columns of the table are known as **parameters**. These define what kind of information you’re collecting — like \"Density\" (a quantity with units), \"Supplier\" (a link to another item), or \"Is Hazardous\" (a boolean).\n\nEach **value** is a single cell in the table — the data point where an item and a parameter intersect.\n\n## Calculating Values with Formulas\n\nParameters can be of type **CALCULATION**, enabling you to create columns whose values are automatically computed from other columns. Calculations use **Excel-style formulas**, making them intuitive for anyone familiar with spreadsheets. To reference another parameter in your formula, simply use its UUID. For example, a formula like `=5c8a9b2d-3f1e-4a6b-8c9d-1e2f3a4b5c6d * 2` would multiply the value of the referenced parameter by 2. You can use standard Excel functions such as `average`, `median` and many others to build complex calculations. This allows you to perform domain-specific computations directly within your table structure.\n\nSupported functions: `average`, `median`, `stdev`, `min`, `max`, `sum`, `product`, `exp`, `ln`, `sqrt`, `abs`, `mod`, `power`, `sumproduct`, `exact`.\nSupported constants: `pi`, `e`.\n\n**Examples:**\n- Simple arithmetic: `=b5755771-503d-4079-b968-5c61503e9a17 * 2 + 10`\n- Using functions: `=average(b5755771-503d-4079-b968-5c61503e9a17, aac6ecd3-3404-4709-82cf-32fa567738e1)`\n- With constants: `=pi * power(b5755771-503d-4079-b968-5c61503e9a17, 2)`\n- Complex calculation: `=sqrt(sum(power(b5755771-503d-4079-b968-5c61503e9a17, 2), power(aac6ecd3-3404-4709-82cf-32fa567738e1, 2)))`\n\n## Structuring Columns with Protocols\n\nTo keep your columns organized, parameters are grouped into **protocols**. Protocols function like sections or categories for your table’s columns.\n\nThere are two kinds:\n- **Standard protocols**, for general information (e.g., \"Processing Parameters\", \"Performance Metrics\").\n- **Formulation protocols**, used to define the **composition** of a sample — specifying ingredients and their amounts. These are especially useful when describing how materials are made.\n\nFor example, in an \"Experiments\" table, you might have:\n- A “Processing Parameters” protocol for temperature, duration, and pressure,\n- A “Composition” formulation protocol listing the raw materials used,\n- A “Performance” protocol with results like hardness or optical properties.\n\n## Enriching Items with Measurements\n\nBeyond just tabular data, each item can have attached **measurements** — files such as:\n- Spectroscopy outputs,\n- Microscope images,\n- PDFs like technical or safety data sheets (TDS, SDS).\n\nBefore a measurement file can be analyzed or visualized, it must be **parsed** — converted into a structured format MaterialsZone can work with. This is done using a **parser**, which you choose when uploading the file. If you don’t see a suitable parser, contact your customer success rep to request one.\n\n## Managing Parsers\n\nParsers are used to convert instrument-specific output files (e.g. CSVs) into a standardized MaterialsZone format that can be displayed in the web app.\n\nYour instrument may not yet be supported by the system’s built-in parsers. If that’s the case, you can create your own custom parser.\n\nCreating your own custom parsers is currently only supported for tabular, text files (E.g. CSV, the various Excel formats, or any text file in a tabular structure). If your files are not in a tabular, text format, contact your customer success rep to request a parser to suit your needs.\n\n### Creating a Custom Parser\n\nTo create a parser, refer to the **Python examples – post request** section below.\n\nYou will need to:\n- Replace the example URL (https://...) with the parser API endpoint you wish to use (listed at the bottom of this page).\n- Replace <api-key> with your own API key.\n- Replace the example payload with the payload format required by the specific parser API you are calling (also detailed below).\n\nParsers created by your organization are private and accessible only to users within your organization.\nThere are also system parsers, created by our team, which are available to all users.\n\nIf you attempt to create a parser that duplicates an existing one in your organization, the API will notify you and return the existing parser's code so you can use it immediately.\n\n### Configuring a Parser\n\nYou can customize how your parser interprets CSV (or other tabular) files through several configuration fields.\n\n#### Column Configuration\n\nUse the **parserConfiguration.configurationColumns** field to specify:\n\n- Which columns to keep.  \n- The name each column should have in the parsed result (**columnNameInResult**).  \n- The unit of measurement for each column (**unit**).  \n\nColumns can be referenced by using one of:\n- **Index** (starting at 0) using **columnIndexInFile**  \n- **Name** using **columnNameInFile** (this can only be used if the first row of the file contains column headers)\n\nYou can configure all of your columns using either indexes or names, but not a combination of both.\n\nColumn values may currently only be integers, floats, or scientific notations. E.g. 5, -10.7, +9.26, 1e20, -2.7E+4, +5e-3. \n\nString values are not currently supported. E.g. 49:21:51, 2021-09-17T00:09:57.\n\nUnits may be complex and contain some math functions. E.g. \"meter\" or \"m\", \"meter/second\" or \"m/s\", \"m/s^2\", \"newton*meter\", \"m^2\", \"m^3\", \"cm^-1\".\n\nUnits may include metric or binary prefixes such as kilo, mega, giga, deci, centi, milli, micro, nano, kibi, mebi, etc.\nPrefixes must be written directly before the unit with no spaces. Examples: kilometer or km, piconewton*meter, mebimeter^2, kilogram/nanometer, µmeter or µm.\n\nGeneric units: \"dimensionless\", \"arbitrary_units\".\n\n#### Metadata and Footer Rows\n\nIf your file contains non-tabular content (e.g. metadata or notes) before or after the main data table:\n\n- Use **parserConfiguration.metadataExpected** to skip rows before the table.  \n- Use **parserConfiguration.footerExpected** to skip rows after the table.\n\n#### Computed Columns\n\nYou can generate new columns from existing data using the **parserConfiguration.computedColumns** field.  \n\nEach computed column must specify:\n\n- Input columns (referenced by **parserConfiguration.configurationColumns.columnNameInResult**, not by **columnNameInFile** or **columnIndexInFile**).  \n- A result column name (**computedColumnName**).  \n- A unit (**unit**).\n\nSupported fuctions:\n- **ABSOLUTE_DELTA** Should have exactly one input column. For each row it computes the absolute value of the difference between subsequent cells of the column, the first cell is set to null. The results have the same unit as the input.\n- **ABSOLUTE_TIMES_SIGN** Should have exactly two input columns. For each row it multiplies the absolute value of one column by the sign of the second one. The results have the same unit as the first input column.\n- **DELTA** Should have exactly one input column. For each row it computes the difference between subsequent cells of the column, the first cell is set to null. The results have the same unit as the input.\n- **DIVIDE** Should have exactly two input columns. For each row it divides the value of the first column by the value of the second column. The result unit is determined by dividing the first column’s unit by the second column’s unit.\nFor example, if the inputs have units meter and second, the result will have the unit meter/second.\n- **DIVIDE_BY_TWO_ROUND_UP** Should have exactly one input column. For each row it divides a the value of the column by 2 and rounds up to the closest integer. The results have the same unit as the input.\n- **IDENTITY** Should have exactly one input column. For each row it sets the same value as the one in the input column. The results have the same unit as the input.\n\nYou may assign any unit to a computed column, as long as it is convertible from the function’s output unit.\nFor example, applying the IDENTITY function to a column with the unit second produces results in seconds. If you set the computed column’s unit to hour, the values will be automatically converted.\nUnits must remain compatible (you cannot convert grams to meters).\nIf the units cancel out (for example, dividing two columns both in meters), the result should use the dimensionless unit.\n\n### Enabling or Disabling Parsers\n\nParsers can be temporarily disabled (without deleting them) by setting the **enabledState** field to false.\n\n### Parser Codes\n\nEach parser is automatically assigned a unique code (e.g. `AB-CD-EF-25`), derived from the first two alphanumeric characters of:\n- **physicalMeasurement**\n- **instrumentManufacturer**  \n- **instrumentModel**\n\nAn incremental counter is appended to ensure uniqueness.  \nEach combination can be used up to 100 times per organization.\n\n### Required Fields\n\nWhen creating a parser, the mandatory fields are  **name**, **physicalMeasurement**, **instrumentModel**, **instrumentManufacturer**, **viewType**, and **supportedFileExtensions**.\n If you are not sure what the **viewType** should be, start with **VIEW_2D_CUSTOM_AXES**.\n **supportedFileExtensions** is a list of file extensions. E.g. ['csv','xlsx','txt'].\n\n## Extra Tools: Files, Jobs, and Job Runs\n\nSome advanced processes rely on a few utility entities:\n- **Files** are general-purpose objects used for managing uploads and downloads.\n- **Jobs** are background processes — like parsing, ETLs, or custom workflows — that run in the cloud.\n- **Job Runs** track the execution and status of these jobs (queued, running, completed, etc.).\n\nYou typically won’t need to interact with these unless a special workflow has been set up for your organization. If so, your customer success representative can guide you.\n\n## Summary\n\nTo recap, here’s how it all connects:\n- **Folders** organize **tables**.\n- **Tables** contain **items** (rows).\n- **Items** are described by **parameters** (columns), grouped into **protocols**.\n- **Values** fill the cells of the table.\n- **Measurements** add rich data and attachments.\n- **Parsers** ingest instrument output files into viewable formats.\n- **Jobs**, **job runs** and **files** power backend processes.\n\nAll of these entities can be accessed and managed via the MaterialsZone API — giving you full control over your data and automation workflows.\n\n# CURL examples\n\nAs a simple example, let us look at the request to fetch all folders that are accessible to the user.\nFetch all folders using CURL:\n\n```shell\ncurl -X GET \"https://api.materials.zone/v2beta1/folders\" --header 'authorization: <api-key>'\n```\n\nCreate new table:\n\n```shell\ncurl -X POST \"https://api.materials.zone/v2beta1/tables\" \\\n  --header 'content-type: application/json' \\\n  --header 'authorization: <api-key>' \\\n  --data '{\n    \"title\": \"My New Table\"\n  }'\n```\n\n# Python examples - get request\n\nFetch all folders using Python's `requests` library can be made as follows:\n\n```python\nimport requests\n\nurl = \"https://api.materials.zone/v2beta1/folders\"\nheaders = {\n    'authorization': '<api-key>'\n}\n\nresponse = requests.get(url, headers=headers)\n\n# Check the status code and print the response\nif response.status_code == 200:\n    print(\"Success!\")\n    print(response.json())  # If the response is in JSON format\nelse:\n    print(f\"Request failed with status code: {response.status_code}\")\n    print(response.text)\n```\n\n# Python examples - post request\n\nCreate new table using Python's `requests` library:\n\n```python\nimport requests\n\nurl = \"https://api.materials.zone/v2beta1/tables\"\nheaders = {\n    'content-type': 'application/json',\n    'authorization': '<api-key>'\n}\npayload = {\n    'title': 'My New Table'\n}\n\nresponse = requests.post(url, headers=headers, json=payload)\n\n# Check the status code and print the response\nif response.status_code == 201:\n    print(\"Table created successfully!\")\n    print(response.json())  # If the response is in JSON format\nelse:\n    print(f\"Request failed with status code: {response.status_code}\")\n    print(response.text)\n```\n\n# Python examples - multipart post request\n\nCreate new measurement using Python's `requests` library:\n\n```python\nimport requests\n\nurl = \"https://api.materials.zone/v2beta1/items/{item_id}/measurements\"\nheaders = {'authorization': '<api-key>'}\npayload = {\n    'title': 'My New Measurement',\n    'parserCode': '<PARSER-CODE>'\n}\nfile_path = 'path/to/your/measurement_file.csv'\nfiles = {\n    'rawFile': ('measurement_file.csv', open(file_path, 'rb'), 'text/csv')\n}\nresponse = requests.post(url, headers=headers, data=payload, files=files)\n\n# Check the status code and print the response\nif response.status_code == 201:\n    print(\"Measurement created successfully!\")\n    print(response.json())  # If the response is in JSON format\nelse:\n    print(f\"Request failed with status code: {response.status_code}\")\n    print(response.text)\n```\n\n# Pagination\n\nRequests that can return a large amount of data, such as the /tables/{tableId}/items GET request to get all items from a table, use pagination to limit the response size. The response of paginated requests will have the following format:\n\n```json\n{\n  \"data\": [...],\n  \"pagination\": {\n    \"startCursor\": \"eyJuYW1lIjo...mZhbHNlfQ==\",\n    \"endCursor\":   \"eyJwcm9kdWN...GFibGUiXX0=\",\n    \"hasNextPage\": true\n  }\n}\n```\n\nEach returned page will contain a list of the returned data (the \"page\") and a \"pagination\" object with: \n- \"startCursor\" - a string that uniquely identifies the first item in the list\n- \"endCursor\" - a string that uniquely identifies the last item in the list\n- \"hasNextPage\" - a boolean field indicating whether there is another page to request.\n\nAfter obtaining a page, the next page can be requested by passing the end cursor of the previous page as the query parameter \"cursor\" in the subsequent request. If the \"cursor\" parameter is not passed, the first page is returned. In addition, the page size can be specified by passing the \"pageSize\" query parameter. Its default value is 100.  \n\nHere is a Python snippet that shows how to construct a list consisting of all the items in a table by looping over all pages:\n\n```python\nimport requests\n\n# Example usage\nbase_url = \"https://api.materials.zone/v2beta1\"\ntable_id = \"9b14a7ab-6d02-4f72-9329-abfdf21002ee\"\napi_key = \"abcd1234\"\n\n# Construct the API endpoint URL using the base URL and the table_id\nurl = f\"{base_url}/tables/{table_id}/items\"\n\n# Set up the headers for the request, indicating that the content type is JSON\nheaders = {\"authorization\": api_key}\n\n# Initialize the cursor to None; this will be used for pagination\ncursor = None\n\n# Initialize an empty list to store all the items fetched from the API\nall_items = []\n\n# Loop to fetch all pages of data from the API\nwhile True:\n    # cursor as query parameters\n    headers = {\"authorization\": api_key}\n    params = {}\n    if cursor:\n        params[\"cursor\"] = cursor\n\n    # Make the GET request to the API endpoint with the payload, headers, and params\n    response = requests.get(url, headers=headers, params=params)\n    \n    # Check if the request was successful (HTTP status code 200)\n    if response.status_code != 200:\n        print(f\"Request failed with status code: {response.status_code}\")\n        print(response.text)\n        break\n    \n    # Parse the JSON response\n    data = response.json()\n    \n    # Add the items from the current page to the list of all items\n    all_items.extend(data['data'])\n    \n    # Check if there is another page of data to fetch\n    if data['pagination']['hasNextPage']:\n        # Update the cursor to the endCursor of the current page to fetch the next page\n        cursor = data['pagination']['endCursor']\n    else:\n        # No more pages to fetch, break out of the loop\n        break\n\n# Print the total number of items fetched\nprint(f\"Fetched {len(all_items)} items.\")\n```\n\n# Operations\n\nBelow is a comprehensive list of all operations supported by the MaterialsZone API, detailing the required parameters and the response schema for each operation.\n\n",
+      "type": "text/plain"
+    }
+  }
+}

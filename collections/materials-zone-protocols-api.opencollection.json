@@ -1,0 +1,156 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Materials Zone files protocols API",
+    "version": "2.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "protocols",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a new protocol in a table",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.materials.zone/v2beta1/tables/:tableId/protocols",
+            "params": [
+              {
+                "name": "tableId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the table to create the protocol in."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new default protocol in a table."
+        },
+        {
+          "info": {
+            "name": "Create a new formulation protocol in a table",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.materials.zone/v2beta1/tables/:tableId/formulation-protocols",
+            "params": [
+              {
+                "name": "tableId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the table to create the formulation protocol in."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new formulation protocol in a table."
+        },
+        {
+          "info": {
+            "name": "Update a protocol",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.materials.zone/v2beta1/protocols/:protocolId",
+            "params": [
+              {
+                "name": "protocolId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the protocol to update."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates an existing protocol."
+        },
+        {
+          "info": {
+            "name": "Delete a protocol",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.materials.zone/v2beta1/protocols/:protocolId",
+            "params": [
+              {
+                "name": "protocolId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the protocol to delete."
+              }
+            ]
+          },
+          "docs": "Deletes a protocol and all its parameters."
+        },
+        {
+          "info": {
+            "name": "Update a formulation protocol",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.materials.zone/v2beta1/formulation-protocols/:protocolId",
+            "params": [
+              {
+                "name": "protocolId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the formulation protocol to update."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates an existing formulation protocol."
+        },
+        {
+          "info": {
+            "name": "Delete a formulation protocol",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.materials.zone/v2beta1/formulation-protocols/:protocolId",
+            "params": [
+              {
+                "name": "protocolId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the formulation protocol to delete."
+              }
+            ]
+          },
+          "docs": "Deletes a formulation protocol and all its parameters."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

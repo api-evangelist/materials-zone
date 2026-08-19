@@ -1,0 +1,1485 @@
+{
+  "item": [
+    {
+      "id": "0e09a8e4-747d-4828-b881-5a1ffc3ce9a2",
+      "name": "protocols",
+      "description": {
+        "content": "Protocols are used to group parameters in tables.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bd39d408-2967-43dd-be3a-d366daa2bfcb",
+          "name": "Create a new protocol in a table",
+          "request": {
+            "name": "Create a new protocol in a table",
+            "description": {
+              "content": "Creates a new default protocol in a table.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tables",
+                ":tableId",
+                "protocols"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "tableId",
+                  "description": "(Required) The UUID of the table to create the protocol in."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "4bd2a7ff-c61d-410c-b959-8c03bc917900",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId",
+                    "protocols"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to create the protocol in."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Measured properties\",\n  \"description\": \"This protocol contains parameters representing the measurement conditions.\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"description\": \"This protocol contains parameters representing the measurement conditions.\",\n    \"hash\": \"string\",\n    \"id\": \"c54b962d-5708-a9ba-00bd-03f7be83be79\",\n    \"parameters\": [\n      {\n        \"id\": \"52424216-cefa-ca18-1e38-3ac640ec32f6\",\n        \"title\": \"Boiling Point\",\n        \"description\": \"string\",\n        \"titleItemId\": \"0f75dff0-9f8f-4e65-7ca5-0f8fe4b72ce1\",\n        \"type\": \"QUANTITY\",\n        \"unit\": \"kg\",\n        \"hash\": \"string\",\n        \"calculation\": {},\n        \"significantFiguresNum\": 646,\n        \"inputParameterIds\": [\n          \"cac91b15-c3e7-72f3-c16c-e5b5908be6f0\",\n          \"15955988-c008-3232-b83d-28467ceae80a\"\n        ],\n        \"enumValueOptions\": [\n          {\n            \"id\": \"da2ff64d-aee2-ad7f-6905-5423303b4063\",\n            \"title\": \"string\"\n          },\n          {\n            \"id\": \"6a79c68c-81e1-1cc4-13df-0669ef021a55\",\n            \"title\": \"string\"\n          }\n        ],\n        \"linkTables\": [\n          \"52eb6f57-82f0-ef73-e536-fbe112f4dc3b\",\n          \"0dfe282f-ab50-bc59-c860-2474d790f15a\"\n        ]\n      },\n      {\n        \"id\": \"e76303f8-9dff-4b98-38ac-6ec25696d3aa\",\n        \"title\": \"Boiling Point\",\n        \"description\": \"string\",\n        \"titleItemId\": \"21d85503-d756-d8d1-e2ef-06567f029eeb\",\n        \"type\": \"QUANTITY\",\n        \"unit\": \"kg\",\n        \"hash\": \"string\",\n        \"calculation\": {},\n        \"significantFiguresNum\": 3248,\n        \"inputParameterIds\": [\n          \"1764a217-0ea5-5a05-71ac-59260328ea20\",\n          \"eb58ccd7-deb9-1378-38d4-87fb607fe4a8\"\n        ],\n        \"enumValueOptions\": [\n          {\n            \"id\": \"88d41e2e-c221-59a6-d817-301df3a04f7d\",\n            \"title\": \"string\"\n          },\n          {\n            \"id\": \"9f0e0a50-8e2f-e73e-ebac-28ceae4d69f4\",\n            \"title\": \"string\"\n          }\n        ],\n        \"linkTables\": [\n          \"12c175ba-5f2d-362e-bf4a-1b373def387f\",\n          \"f90ca9a6-3b62-ff8b-1e4b-e07a8d3c230b\"\n        ]\n      }\n    ],\n    \"title\": \"Measured properties\",\n    \"titleTableIds\": [],\n    \"type\": \"PROTOCOL\",\n    \"unit\": null\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "99e4e08d-97e4-4c52-880b-227c5b261859",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId",
+                    "protocols"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to create the protocol in."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Measured properties\",\n  \"description\": \"This protocol contains parameters representing the measurement conditions.\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "525e7fec-7e10-4024-8ea6-7d1bd2cac33c",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId",
+                    "protocols"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to create the protocol in."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Measured properties\",\n  \"description\": \"This protocol contains parameters representing the measurement conditions.\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0a295f0c-5814-4b1f-8895-ea2cee7e07d7",
+          "name": "Create a new formulation protocol in a table",
+          "request": {
+            "name": "Create a new formulation protocol in a table",
+            "description": {
+              "content": "Creates a new formulation protocol in a table.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tables",
+                ":tableId",
+                "formulation-protocols"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "tableId",
+                  "description": "(Required) The UUID of the table to create the formulation protocol in."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"<string>\",\n  \"titleTableIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ],\n  \"description\": \"<string>\",\n  \"unit\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "415f418e-7236-4efb-afb6-2036aa0e963a",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId",
+                    "formulation-protocols"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to create the formulation protocol in."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Formulation\",\n  \"titleTableIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ],\n  \"description\": \"This protocol describes the composition of materials.\",\n  \"unit\": \"%\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"description\": \"This protocol contains parameters representing the measurement conditions.\",\n    \"hash\": \"string\",\n    \"id\": \"b4d615e2-7f97-c699-66b5-715855c4c429\",\n    \"parameters\": [],\n    \"title\": \"Measured properties\",\n    \"titleTableIds\": [\n      \"e39ff24e-9c5e-3803-feb6-9ef595056811\",\n      \"007c3fb9-bd71-7233-398c-9edf54d1f8f3\"\n    ],\n    \"type\": \"FORMULATION\",\n    \"unit\": \"%\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4b36c2f5-49ba-47fc-acd2-2dd45ebf6326",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId",
+                    "formulation-protocols"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to create the formulation protocol in."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Formulation\",\n  \"titleTableIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ],\n  \"description\": \"This protocol describes the composition of materials.\",\n  \"unit\": \"%\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "fe2ec4a5-d310-4442-bcdb-b67a99a3d5e4",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tables",
+                    ":tableId",
+                    "formulation-protocols"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "tableId",
+                      "description": "(Required) The UUID of the table to create the formulation protocol in."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Formulation\",\n  \"titleTableIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ],\n  \"description\": \"This protocol describes the composition of materials.\",\n  \"unit\": \"%\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5643c938-6e0d-4853-b6d2-49c910615870",
+          "name": "Update a protocol",
+          "request": {
+            "name": "Update a protocol",
+            "description": {
+              "content": "Updates an existing protocol.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "protocols",
+                ":protocolId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "protocolId",
+                  "description": "(Required) The UUID of the protocol to update."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"hash\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"parameterIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3c8a4eeb-5a29-403e-8b2d-1aae6895c177",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "protocols",
+                    ":protocolId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "protocolId",
+                      "description": "(Required) The UUID of the protocol to update."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"hash\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"parameterIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"description\": \"This protocol contains parameters representing the measurement conditions.\",\n    \"hash\": \"string\",\n    \"id\": \"c54b962d-5708-a9ba-00bd-03f7be83be79\",\n    \"parameters\": [\n      {\n        \"id\": \"52424216-cefa-ca18-1e38-3ac640ec32f6\",\n        \"title\": \"Boiling Point\",\n        \"description\": \"string\",\n        \"titleItemId\": \"0f75dff0-9f8f-4e65-7ca5-0f8fe4b72ce1\",\n        \"type\": \"QUANTITY\",\n        \"unit\": \"kg\",\n        \"hash\": \"string\",\n        \"calculation\": {},\n        \"significantFiguresNum\": 646,\n        \"inputParameterIds\": [\n          \"cac91b15-c3e7-72f3-c16c-e5b5908be6f0\",\n          \"15955988-c008-3232-b83d-28467ceae80a\"\n        ],\n        \"enumValueOptions\": [\n          {\n            \"id\": \"da2ff64d-aee2-ad7f-6905-5423303b4063\",\n            \"title\": \"string\"\n          },\n          {\n            \"id\": \"6a79c68c-81e1-1cc4-13df-0669ef021a55\",\n            \"title\": \"string\"\n          }\n        ],\n        \"linkTables\": [\n          \"52eb6f57-82f0-ef73-e536-fbe112f4dc3b\",\n          \"0dfe282f-ab50-bc59-c860-2474d790f15a\"\n        ]\n      },\n      {\n        \"id\": \"e76303f8-9dff-4b98-38ac-6ec25696d3aa\",\n        \"title\": \"Boiling Point\",\n        \"description\": \"string\",\n        \"titleItemId\": \"21d85503-d756-d8d1-e2ef-06567f029eeb\",\n        \"type\": \"QUANTITY\",\n        \"unit\": \"kg\",\n        \"hash\": \"string\",\n        \"calculation\": {},\n        \"significantFiguresNum\": 3248,\n        \"inputParameterIds\": [\n          \"1764a217-0ea5-5a05-71ac-59260328ea20\",\n          \"eb58ccd7-deb9-1378-38d4-87fb607fe4a8\"\n        ],\n        \"enumValueOptions\": [\n          {\n            \"id\": \"88d41e2e-c221-59a6-d817-301df3a04f7d\",\n            \"title\": \"string\"\n          },\n          {\n            \"id\": \"9f0e0a50-8e2f-e73e-ebac-28ceae4d69f4\",\n            \"title\": \"string\"\n          }\n        ],\n        \"linkTables\": [\n          \"12c175ba-5f2d-362e-bf4a-1b373def387f\",\n          \"f90ca9a6-3b62-ff8b-1e4b-e07a8d3c230b\"\n        ]\n      }\n    ],\n    \"title\": \"Measured properties\",\n    \"titleTableIds\": [],\n    \"type\": \"PROTOCOL\",\n    \"unit\": null\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8df5a0b5-1a18-48e6-a998-1efcc0d6cb36",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "protocols",
+                    ":protocolId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "protocolId",
+                      "description": "(Required) The UUID of the protocol to update."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"hash\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"parameterIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1f6ddbb6-76ed-43ce-a16c-c1d98be18bc7",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "protocols",
+                    ":protocolId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "protocolId",
+                      "description": "(Required) The UUID of the protocol to update."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"hash\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"parameterIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6a9ce6a3-9191-41fe-822a-89e89f558160",
+              "name": "Conflict - The protocol has been modified since you last retrieved it",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "protocols",
+                    ":protocolId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "protocolId",
+                      "description": "(Required) The UUID of the protocol to update."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"hash\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"parameterIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e4a62694-c9e1-444d-a7e7-deb8e90fe385",
+          "name": "Delete a protocol",
+          "request": {
+            "name": "Delete a protocol",
+            "description": {
+              "content": "Deletes a protocol and all its parameters.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "protocols",
+                ":protocolId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "protocolId",
+                  "description": "(Required) The UUID of the protocol to delete."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b04b19e2-2268-47ce-a52f-ccd2571c166e",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "protocols",
+                    ":protocolId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "protocolId",
+                      "description": "(Required) The UUID of the protocol to delete."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b8e2e5ba-637b-4aea-85c4-9da25c009867",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "protocols",
+                    ":protocolId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "protocolId",
+                      "description": "(Required) The UUID of the protocol to delete."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "be79decf-2c5b-41d5-9e0c-f4fdaf9fecc1",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "protocols",
+                    ":protocolId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "protocolId",
+                      "description": "(Required) The UUID of the protocol to delete."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a3ce8882-663e-4602-ae51-3e211293ccc7",
+          "name": "Update a formulation protocol",
+          "request": {
+            "name": "Update a formulation protocol",
+            "description": {
+              "content": "Updates an existing formulation protocol.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "formulation-protocols",
+                ":protocolId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "protocolId",
+                  "description": "(Required) The UUID of the formulation protocol to update."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"hash\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"titleTableIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ],\n  \"unit\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5a55a055-9ec2-47e9-82fe-fabf7490f2c0",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "formulation-protocols",
+                    ":protocolId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "protocolId",
+                      "description": "(Required) The UUID of the formulation protocol to update."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"hash\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"titleTableIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ],\n  \"unit\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"description\": \"This protocol contains parameters representing the measurement conditions.\",\n    \"hash\": \"string\",\n    \"id\": \"b4d615e2-7f97-c699-66b5-715855c4c429\",\n    \"parameters\": [],\n    \"title\": \"Measured properties\",\n    \"titleTableIds\": [\n      \"e39ff24e-9c5e-3803-feb6-9ef595056811\",\n      \"007c3fb9-bd71-7233-398c-9edf54d1f8f3\"\n    ],\n    \"type\": \"FORMULATION\",\n    \"unit\": \"%\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d633e6e5-7489-49f8-9412-23caa73b56f2",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "formulation-protocols",
+                    ":protocolId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "protocolId",
+                      "description": "(Required) The UUID of the formulation protocol to update."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"hash\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"titleTableIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ],\n  \"unit\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "44eb3bfa-02c4-4180-89c8-7ce0eb1093ae",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "formulation-protocols",
+                    ":protocolId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "protocolId",
+                      "description": "(Required) The UUID of the formulation protocol to update."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"hash\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"titleTableIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ],\n  \"unit\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f21b74b8-b62b-424e-a23f-2868248047f3",
+              "name": "Conflict - The protocol has been modified since you last retrieved it",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "formulation-protocols",
+                    ":protocolId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "protocolId",
+                      "description": "(Required) The UUID of the formulation protocol to update."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"hash\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"titleTableIds\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ],\n  \"unit\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a7bf5336-c631-40b9-a503-a0221e5dcdde",
+          "name": "Delete a formulation protocol",
+          "request": {
+            "name": "Delete a formulation protocol",
+            "description": {
+              "content": "Deletes a formulation protocol and all its parameters.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "formulation-protocols",
+                ":protocolId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "protocolId",
+                  "description": "(Required) The UUID of the formulation protocol to delete."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5c71cc53-a7a6-4696-a8c1-66345919c274",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "formulation-protocols",
+                    ":protocolId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "protocolId",
+                      "description": "(Required) The UUID of the formulation protocol to delete."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9e2a57b1-a7e1-4f40-9286-be02af87ab0b",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "formulation-protocols",
+                    ":protocolId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "protocolId",
+                      "description": "(Required) The UUID of the formulation protocol to delete."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "81e7ebb0-2840-4370-9eb2-f58d55b2c929",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "formulation-protocols",
+                    ":protocolId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "protocolId",
+                      "description": "(Required) The UUID of the formulation protocol to delete."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.materials.zone/v2beta1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "3ecd0159-25f8-4991-b7b8-a9b56013d451",
+    "name": "Materials Zone files protocols API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "MaterialsZone's RESTful API is designed to facilitate seamless integration with your existing systems, enabling you to automate workflows, connect diverse data sources, and perform domain-specific analysis. With a straightforward, predictable URL structure and support for standard HTTP methods (POST, GET, PUT, DELETE), our API is built for ease of use and flexibility.\n\n> 💡 **API Examples Repository**: Check out our [MaterialsZone API Examples](https://github.com/materialscloud/materials-zone-api-examples) repository for practical Python code samples demonstrating how to use the API for various use cases.\n\n# Authentication and Security\n\nEach user within the organization can request a private API key, ensuring secure authentication and enabling an audit trail. API keys can be rotated upon request at any desired frequency. The API key is provided in the header of each request, as explained in the \"Getting Started\" section below. \n\nAll data stored in MaterialsZone is securely segregated, ensuring your organization's information remains isolated and protected. Permissions within the organization can be managed using MaterialsZone's permission system to control access to specific data.\n\nData is encrypted both in transit and at rest, ensuring that all communication with our API is secure and that stored data is safeguarded against unauthorized access.\n\n# Getting Started\n\nMaterialsZone's API provides access to resources via structured URI paths. The API uses the standard HTTP methods like GET, POST, PUT, and DELETE and uses the JSON format for the payload and response of the requests. Each resource and its available operations are described in detail in the sections below.\n\nThe URI of every request consists of the domain `https://api.materials.zone`, the path of the endpoint prefixed by the version of the API, and the API key passed as a header `authorization`. In addition, some endpoints may require passing a path parameter and a payload in JSON format. Requests can be made using the command line tool CURL, Python's `requests` library or any other method.\n\n# Understanding the Entities of MaterialsZone\n\nWhen working with the MaterialsZone API, you’re not just dealing with technical data structures — you’re managing your own materials data in a way that mirrors your real-world workflows. Let’s walk through the key **entities** of the platform, from a user’s perspective.\n\n## Organizing with Folders and Tables\n\nYour workspace starts with **folders**. Think of them like project directories — you can use them to group **tables** based on product lines, sites, experiments, or organizational teams. Folders can even contain other folders, allowing you to build a clear, navigable hierarchy.\n\nInside each folder, you'll place **tables**. Each table is a structured dataset — for example, a table of raw materials or a table of experiments. Tables define the structure of your data and store the actual records (called **items**).\n\n## Capturing Data with Items, Parameters, and Values\n\nEach row in a table is called an **item**. For instance:\n- An item in your \"Raw Materials\" table might represent a specific grade of aluminum.\n- An item in your \"Experiments\" table could describe one formulation you tested.\n\nThe columns of the table are known as **parameters**. These define what kind of information you’re collecting — like \"Density\" (a quantity with units), \"Supplier\" (a link to another item), or \"Is Hazardous\" (a boolean).\n\nEach **value** is a single cell in the table — the data point where an item and a parameter intersect.\n\n## Calculating Values with Formulas\n\nParameters can be of type **CALCULATION**, enabling you to create columns whose values are automatically computed from other columns. Calculations use **Excel-style formulas**, making them intuitive for anyone familiar with spreadsheets. To reference another parameter in your formula, simply use its UUID. For example, a formula like `=5c8a9b2d-3f1e-4a6b-8c9d-1e2f3a4b5c6d * 2` would multiply the value of the referenced parameter by 2. You can use standard Excel functions such as `average`, `median` and many others to build complex calculations. This allows you to perform domain-specific computations directly within your table structure.\n\nSupported functions: `average`, `median`, `stdev`, `min`, `max`, `sum`, `product`, `exp`, `ln`, `sqrt`, `abs`, `mod`, `power`, `sumproduct`, `exact`.\nSupported constants: `pi`, `e`.\n\n**Examples:**\n- Simple arithmetic: `=b5755771-503d-4079-b968-5c61503e9a17 * 2 + 10`\n- Using functions: `=average(b5755771-503d-4079-b968-5c61503e9a17, aac6ecd3-3404-4709-82cf-32fa567738e1)`\n- With constants: `=pi * power(b5755771-503d-4079-b968-5c61503e9a17, 2)`\n- Complex calculation: `=sqrt(sum(power(b5755771-503d-4079-b968-5c61503e9a17, 2), power(aac6ecd3-3404-4709-82cf-32fa567738e1, 2)))`\n\n## Structuring Columns with Protocols\n\nTo keep your columns organized, parameters are grouped into **protocols**. Protocols function like sections or categories for your table’s columns.\n\nThere are two kinds:\n- **Standard protocols**, for general information (e.g., \"Processing Parameters\", \"Performance Metrics\").\n- **Formulation protocols**, used to define the **composition** of a sample — specifying ingredients and their amounts. These are especially useful when describing how materials are made.\n\nFor example, in an \"Experiments\" table, you might have:\n- A “Processing Parameters” protocol for temperature, duration, and pressure,\n- A “Composition” formulation protocol listing the raw materials used,\n- A “Performance” protocol with results like hardness or optical properties.\n\n## Enriching Items with Measurements\n\nBeyond just tabular data, each item can have attached **measurements** — files such as:\n- Spectroscopy outputs,\n- Microscope images,\n- PDFs like technical or safety data sheets (TDS, SDS).\n\nBefore a measurement file can be analyzed or visualized, it must be **parsed** — converted into a structured format MaterialsZone can work with. This is done using a **parser**, which you choose when uploading the file. If you don’t see a suitable parser, contact your customer success rep to request one.\n\n## Managing Parsers\n\nParsers are used to convert instrument-specific output files (e.g. CSVs) into a standardized MaterialsZone format that can be displayed in the web app.\n\nYour instrument may not yet be supported by the system’s built-in parsers. If that’s the case, you can create your own custom parser.\n\nCreating your own custom parsers is currently only supported for tabular, text files (E.g. CSV, the various Excel formats, or any text file in a tabular structure). If your files are not in a tabular, text format, contact your customer success rep to request a parser to suit your needs.\n\n### Creating a Custom Parser\n\nTo create a parser, refer to the **Python examples – post request** section below.\n\nYou will need to:\n- Replace the example URL (https://...) with the parser API endpoint you wish to use (listed at the bottom of this page).\n- Replace <api-key> with your own API key.\n- Replace the example payload with the payload format required by the specific parser API you are calling (also detailed below).\n\nParsers created by your organization are private and accessible only to users within your organization.\nThere are also system parsers, created by our team, which are available to all users.\n\nIf you attempt to create a parser that duplicates an existing one in your organization, the API will notify you and return the existing parser's code so you can use it immediately.\n\n### Configuring a Parser\n\nYou can customize how your parser interprets CSV (or other tabular) files through several configuration fields.\n\n#### Column Configuration\n\nUse the **parserConfiguration.configurationColumns** field to specify:\n\n- Which columns to keep.  \n- The name each column should have in the parsed result (**columnNameInResult**).  \n- The unit of measurement for each column (**unit**).  \n\nColumns can be referenced by using one of:\n- **Index** (starting at 0) using **columnIndexInFile**  \n- **Name** using **columnNameInFile** (this can only be used if the first row of the file contains column headers)\n\nYou can configure all of your columns using either indexes or names, but not a combination of both.\n\nColumn values may currently only be integers, floats, or scientific notations. E.g. 5, -10.7, +9.26, 1e20, -2.7E+4, +5e-3. \n\nString values are not currently supported. E.g. 49:21:51, 2021-09-17T00:09:57.\n\nUnits may be complex and contain some math functions. E.g. \"meter\" or \"m\", \"meter/second\" or \"m/s\", \"m/s^2\", \"newton*meter\", \"m^2\", \"m^3\", \"cm^-1\".\n\nUnits may include metric or binary prefixes such as kilo, mega, giga, deci, centi, milli, micro, nano, kibi, mebi, etc.\nPrefixes must be written directly before the unit with no spaces. Examples: kilometer or km, piconewton*meter, mebimeter^2, kilogram/nanometer, µmeter or µm.\n\nGeneric units: \"dimensionless\", \"arbitrary_units\".\n\n#### Metadata and Footer Rows\n\nIf your file contains non-tabular content (e.g. metadata or notes) before or after the main data table:\n\n- Use **parserConfiguration.metadataExpected** to skip rows before the table.  \n- Use **parserConfiguration.footerExpected** to skip rows after the table.\n\n#### Computed Columns\n\nYou can generate new columns from existing data using the **parserConfiguration.computedColumns** field.  \n\nEach computed column must specify:\n\n- Input columns (referenced by **parserConfiguration.configurationColumns.columnNameInResult**, not by **columnNameInFile** or **columnIndexInFile**).  \n- A result column name (**computedColumnName**).  \n- A unit (**unit**).\n\nSupported fuctions:\n- **ABSOLUTE_DELTA** Should have exactly one input column. For each row it computes the absolute value of the difference between subsequent cells of the column, the first cell is set to null. The results have the same unit as the input.\n- **ABSOLUTE_TIMES_SIGN** Should have exactly two input columns. For each row it multiplies the absolute value of one column by the sign of the second one. The results have the same unit as the first input column.\n- **DELTA** Should have exactly one input column. For each row it computes the difference between subsequent cells of the column, the first cell is set to null. The results have the same unit as the input.\n- **DIVIDE** Should have exactly two input columns. For each row it divides the value of the first column by the value of the second column. The result unit is determined by dividing the first column’s unit by the second column’s unit.\nFor example, if the inputs have units meter and second, the result will have the unit meter/second.\n- **DIVIDE_BY_TWO_ROUND_UP** Should have exactly one input column. For each row it divides a the value of the column by 2 and rounds up to the closest integer. The results have the same unit as the input.\n- **IDENTITY** Should have exactly one input column. For each row it sets the same value as the one in the input column. The results have the same unit as the input.\n\nYou may assign any unit to a computed column, as long as it is convertible from the function’s output unit.\nFor example, applying the IDENTITY function to a column with the unit second produces results in seconds. If you set the computed column’s unit to hour, the values will be automatically converted.\nUnits must remain compatible (you cannot convert grams to meters).\nIf the units cancel out (for example, dividing two columns both in meters), the result should use the dimensionless unit.\n\n### Enabling or Disabling Parsers\n\nParsers can be temporarily disabled (without deleting them) by setting the **enabledState** field to false.\n\n### Parser Codes\n\nEach parser is automatically assigned a unique code (e.g. `AB-CD-EF-25`), derived from the first two alphanumeric characters of:\n- **physicalMeasurement**\n- **instrumentManufacturer**  \n- **instrumentModel**\n\nAn incremental counter is appended to ensure uniqueness.  \nEach combination can be used up to 100 times per organization.\n\n### Required Fields\n\nWhen creating a parser, the mandatory fields are  **name**, **physicalMeasurement**, **instrumentModel**, **instrumentManufacturer**, **viewType**, and **supportedFileExtensions**.\n If you are not sure what the **viewType** should be, start with **VIEW_2D_CUSTOM_AXES**.\n **supportedFileExtensions** is a list of file extensions. E.g. ['csv','xlsx','txt'].\n\n## Extra Tools: Files, Jobs, and Job Runs\n\nSome advanced processes rely on a few utility entities:\n- **Files** are general-purpose objects used for managing uploads and downloads.\n- **Jobs** are background processes — like parsing, ETLs, or custom workflows — that run in the cloud.\n- **Job Runs** track the execution and status of these jobs (queued, running, completed, etc.).\n\nYou typically won’t need to interact with these unless a special workflow has been set up for your organization. If so, your customer success representative can guide you.\n\n## Summary\n\nTo recap, here’s how it all connects:\n- **Folders** organize **tables**.\n- **Tables** contain **items** (rows).\n- **Items** are described by **parameters** (columns), grouped into **protocols**.\n- **Values** fill the cells of the table.\n- **Measurements** add rich data and attachments.\n- **Parsers** ingest instrument output files into viewable formats.\n- **Jobs**, **job runs** and **files** power backend processes.\n\nAll of these entities can be accessed and managed via the MaterialsZone API — giving you full control over your data and automation workflows.\n\n# CURL examples\n\nAs a simple example, let us look at the request to fetch all folders that are accessible to the user.\nFetch all folders using CURL:\n\n```shell\ncurl -X GET \"https://api.materials.zone/v2beta1/folders\" --header 'authorization: <api-key>'\n```\n\nCreate new table:\n\n```shell\ncurl -X POST \"https://api.materials.zone/v2beta1/tables\" \\\n  --header 'content-type: application/json' \\\n  --header 'authorization: <api-key>' \\\n  --data '{\n    \"title\": \"My New Table\"\n  }'\n```\n\n# Python examples - get request\n\nFetch all folders using Python's `requests` library can be made as follows:\n\n```python\nimport requests\n\nurl = \"https://api.materials.zone/v2beta1/folders\"\nheaders = {\n    'authorization': '<api-key>'\n}\n\nresponse = requests.get(url, headers=headers)\n\n# Check the status code and print the response\nif response.status_code == 200:\n    print(\"Success!\")\n    print(response.json())  # If the response is in JSON format\nelse:\n    print(f\"Request failed with status code: {response.status_code}\")\n    print(response.text)\n```\n\n# Python examples - post request\n\nCreate new table using Python's `requests` library:\n\n```python\nimport requests\n\nurl = \"https://api.materials.zone/v2beta1/tables\"\nheaders = {\n    'content-type': 'application/json',\n    'authorization': '<api-key>'\n}\npayload = {\n    'title': 'My New Table'\n}\n\nresponse = requests.post(url, headers=headers, json=payload)\n\n# Check the status code and print the response\nif response.status_code == 201:\n    print(\"Table created successfully!\")\n    print(response.json())  # If the response is in JSON format\nelse:\n    print(f\"Request failed with status code: {response.status_code}\")\n    print(response.text)\n```\n\n# Python examples - multipart post request\n\nCreate new measurement using Python's `requests` library:\n\n```python\nimport requests\n\nurl = \"https://api.materials.zone/v2beta1/items/{item_id}/measurements\"\nheaders = {'authorization': '<api-key>'}\npayload = {\n    'title': 'My New Measurement',\n    'parserCode': '<PARSER-CODE>'\n}\nfile_path = 'path/to/your/measurement_file.csv'\nfiles = {\n    'rawFile': ('measurement_file.csv', open(file_path, 'rb'), 'text/csv')\n}\nresponse = requests.post(url, headers=headers, data=payload, files=files)\n\n# Check the status code and print the response\nif response.status_code == 201:\n    print(\"Measurement created successfully!\")\n    print(response.json())  # If the response is in JSON format\nelse:\n    print(f\"Request failed with status code: {response.status_code}\")\n    print(response.text)\n```\n\n# Pagination\n\nRequests that can return a large amount of data, such as the /tables/{tableId}/items GET request to get all items from a table, use pagination to limit the response size. The response of paginated requests will have the following format:\n\n```json\n{\n  \"data\": [...],\n  \"pagination\": {\n    \"startCursor\": \"eyJuYW1lIjo...mZhbHNlfQ==\",\n    \"endCursor\":   \"eyJwcm9kdWN...GFibGUiXX0=\",\n    \"hasNextPage\": true\n  }\n}\n```\n\nEach returned page will contain a list of the returned data (the \"page\") and a \"pagination\" object with: \n- \"startCursor\" - a string that uniquely identifies the first item in the list\n- \"endCursor\" - a string that uniquely identifies the last item in the list\n- \"hasNextPage\" - a boolean field indicating whether there is another page to request.\n\nAfter obtaining a page, the next page can be requested by passing the end cursor of the previous page as the query parameter \"cursor\" in the subsequent request. If the \"cursor\" parameter is not passed, the first page is returned. In addition, the page size can be specified by passing the \"pageSize\" query parameter. Its default value is 100.  \n\nHere is a Python snippet that shows how to construct a list consisting of all the items in a table by looping over all pages:\n\n```python\nimport requests\n\n# Example usage\nbase_url = \"https://api.materials.zone/v2beta1\"\ntable_id = \"9b14a7ab-6d02-4f72-9329-abfdf21002ee\"\napi_key = \"abcd1234\"\n\n# Construct the API endpoint URL using the base URL and the table_id\nurl = f\"{base_url}/tables/{table_id}/items\"\n\n# Set up the headers for the request, indicating that the content type is JSON\nheaders = {\"authorization\": api_key}\n\n# Initialize the cursor to None; this will be used for pagination\ncursor = None\n\n# Initialize an empty list to store all the items fetched from the API\nall_items = []\n\n# Loop to fetch all pages of data from the API\nwhile True:\n    # cursor as query parameters\n    headers = {\"authorization\": api_key}\n    params = {}\n    if cursor:\n        params[\"cursor\"] = cursor\n\n    # Make the GET request to the API endpoint with the payload, headers, and params\n    response = requests.get(url, headers=headers, params=params)\n    \n    # Check if the request was successful (HTTP status code 200)\n    if response.status_code != 200:\n        print(f\"Request failed with status code: {response.status_code}\")\n        print(response.text)\n        break\n    \n    # Parse the JSON response\n    data = response.json()\n    \n    # Add the items from the current page to the list of all items\n    all_items.extend(data['data'])\n    \n    # Check if there is another page of data to fetch\n    if data['pagination']['hasNextPage']:\n        # Update the cursor to the endCursor of the current page to fetch the next page\n        cursor = data['pagination']['endCursor']\n    else:\n        # No more pages to fetch, break out of the loop\n        break\n\n# Print the total number of items fetched\nprint(f\"Fetched {len(all_items)} items.\")\n```\n\n# Operations\n\nBelow is a comprehensive list of all operations supported by the MaterialsZone API, detailing the required parameters and the response schema for each operation.\n\n",
+      "type": "text/plain"
+    }
+  }
+}

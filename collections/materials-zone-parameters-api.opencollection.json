@@ -1,0 +1,91 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Materials Zone files parameters API",
+    "version": "2.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "parameters",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a new parameter in a protocol",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.materials.zone/v2beta1/protocols/:protocolId/parameters",
+            "params": [
+              {
+                "name": "protocolId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the protocol to create the parameter in."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new parameter in a protocol."
+        },
+        {
+          "info": {
+            "name": "Update a parameter",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.materials.zone/v2beta1/parameters/:parameterId",
+            "params": [
+              {
+                "name": "parameterId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the parameter to update."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates an existing parameter."
+        },
+        {
+          "info": {
+            "name": "Delete a parameter",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.materials.zone/v2beta1/parameters/:parameterId",
+            "params": [
+              {
+                "name": "parameterId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the parameter to delete."
+              }
+            ]
+          },
+          "docs": "Deletes a parameter."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

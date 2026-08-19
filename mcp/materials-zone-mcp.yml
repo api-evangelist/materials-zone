@@ -149,3 +149,9 @@ tools:
   description: Update multiple items in a table
   method: PATCH
   path: /tables/{tableId}/items/batch
+deployment:
+  mode: none
+  verified: derived
+  tools: 35
+  checked: '2026-08-12'
+  source: catalog MCP census

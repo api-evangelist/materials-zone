@@ -1,0 +1,87 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Materials Zone files items API",
+    "version": "2.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "items",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a single item",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.materials.zone/v2beta1/items/:itemId",
+            "params": [
+              {
+                "name": "itemId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the item to return."
+              }
+            ]
+          },
+          "docs": "This operation retrieves a single item"
+        },
+        {
+          "info": {
+            "name": "Update a single item",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.materials.zone/v2beta1/items/:itemId",
+            "params": [
+              {
+                "name": "itemId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the item to update."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "This operation can be used to update both the metadata and values of a single item."
+        },
+        {
+          "info": {
+            "name": "Delete a single item",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.materials.zone/v2beta1/items/:itemId",
+            "params": [
+              {
+                "name": "itemId",
+                "value": "eb1aa7b4-0e21-46de-b448-0c4eabdd32b7",
+                "type": "path",
+                "description": "The UUID of the item to delete."
+              }
+            ]
+          },
+          "docs": "This operation can be used to delete a single item."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
