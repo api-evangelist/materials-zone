@@ -28,7 +28,7 @@ accessModel:
   generated: '2026-07-22'
   method: derived
 image: https://cdn.prod.website-files.com/66a76467298c454de539f7aa/66cef238e96d8f1502659d8f_WebClip%20%20256x256.png
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-20'
 tags:
