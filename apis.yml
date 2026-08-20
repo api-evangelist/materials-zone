@@ -46,6 +46,8 @@ apis:
   humanURL: https://developer.materials.zone/
   baseURL: https://api.materials.zone/v2beta1
   tags:
+  - File
+  tags_raw:
   - files
   properties:
   - type: OpenAPI
@@ -58,6 +60,8 @@ apis:
   humanURL: https://developer.materials.zone/
   baseURL: https://api.materials.zone/v2beta1
   tags:
+  - Folders
+  tags_raw:
   - folders
   properties:
   - type: OpenAPI
@@ -70,6 +74,8 @@ apis:
   humanURL: https://developer.materials.zone/
   baseURL: https://api.materials.zone/v2beta1
   tags:
+  - Item
+  tags_raw:
   - items
   properties:
   - type: OpenAPI
@@ -82,6 +88,8 @@ apis:
   humanURL: https://developer.materials.zone/
   baseURL: https://api.materials.zone/v2beta1
   tags:
+  - Job
+  tags_raw:
   - jobs
   properties:
   - type: OpenAPI
@@ -94,6 +102,8 @@ apis:
   humanURL: https://developer.materials.zone/
   baseURL: https://api.materials.zone/v2beta1
   tags:
+  - Measurements
+  tags_raw:
   - measurements
   properties:
   - type: OpenAPI
@@ -106,6 +116,8 @@ apis:
   humanURL: https://developer.materials.zone/
   baseURL: https://api.materials.zone/v2beta1
   tags:
+  - Parameters
+  tags_raw:
   - parameters
   properties:
   - type: OpenAPI
@@ -119,6 +131,8 @@ apis:
   humanURL: https://developer.materials.zone/
   baseURL: https://api.materials.zone/v2beta1
   tags:
+  - Parsers
+  tags_raw:
   - parsers
   properties:
   - type: OpenAPI
@@ -131,6 +145,8 @@ apis:
   humanURL: https://developer.materials.zone/
   baseURL: https://api.materials.zone/v2beta1
   tags:
+  - Protocols
+  tags_raw:
   - protocols
   properties:
   - type: OpenAPI
@@ -143,6 +159,8 @@ apis:
   humanURL: https://developer.materials.zone/
   baseURL: https://api.materials.zone/v2beta1
   tags:
+  - Tables
+  tags_raw:
   - tables
   properties:
   - type: OpenAPI
