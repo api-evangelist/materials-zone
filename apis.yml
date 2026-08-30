@@ -72,7 +72,7 @@ apis:
   humanURL: https://developer.materials.zone/
   baseURL: https://api.materials.zone/v2beta1
   tags:
-  - Folders
+  - folders
   tags_raw:
   - folders
   properties:
@@ -114,7 +114,7 @@ apis:
   humanURL: https://developer.materials.zone/
   baseURL: https://api.materials.zone/v2beta1
   tags:
-  - Measurements
+  - measurements
   tags_raw:
   - measurements
   properties:
@@ -128,7 +128,7 @@ apis:
   humanURL: https://developer.materials.zone/
   baseURL: https://api.materials.zone/v2beta1
   tags:
-  - Parameters
+  - parameters
   tags_raw:
   - parameters
   properties:
@@ -143,7 +143,7 @@ apis:
   humanURL: https://developer.materials.zone/
   baseURL: https://api.materials.zone/v2beta1
   tags:
-  - Parsers
+  - parsers
   tags_raw:
   - parsers
   properties:
