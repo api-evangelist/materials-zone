@@ -144,7 +144,7 @@ apis:
   humanURL: https://developer.materials.zone/
   baseURL: https://api.materials.zone/v2beta1
   tags:
-  - Parsers
+  - Parser
   tags_raw:
   - parsers
   properties:
@@ -158,7 +158,7 @@ apis:
   humanURL: https://developer.materials.zone/
   baseURL: https://api.materials.zone/v2beta1
   tags:
-  - Protocols
+  - Protocol
   tags_raw:
   - protocols
   properties:
