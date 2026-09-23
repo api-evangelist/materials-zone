@@ -1,15 +1,7 @@
 {
   "provider": "materials-zone",
   "sources": [
-    "materials-zone-files-api-openapi.yml",
-    "materials-zone-folders-api-openapi.yml",
-    "materials-zone-items-api-openapi.yml",
-    "materials-zone-jobs-api-openapi.yml",
-    "materials-zone-measurements-api-openapi.yml",
-    "materials-zone-parameters-api-openapi.yml",
-    "materials-zone-parsers-api-openapi.yml",
-    "materials-zone-protocols-api-openapi.yml",
-    "materials-zone-tables-api-openapi.yml"
+    "_original/materials-zone-openapi.json"
   ],
   "outputs": [
     "materials-zone-files-api-openapi.yml",
@@ -25,6 +17,20 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "materials-zone-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "materials-zone-files-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "materials-zone-folders-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "materials-zone-items-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "materials-zone-jobs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "materials-zone-measurements-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "materials-zone-parameters-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "materials-zone-parsers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "materials-zone-protocols-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "materials-zone-tables-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
