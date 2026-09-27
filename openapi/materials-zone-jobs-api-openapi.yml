@@ -73,6 +73,27 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    Job:
+      properties:
+        id:
+          type: string
+          description: The id of the job.
+        title:
+          type: string
+          description: The title of the job.
+        description:
+          type: string
+          description: The description of the job.
+        expectedPayload:
+          type: array
+          items:
+            type: string
+          description: The expected payload of the job.
+      required:
+      - id
+      - title
+      - description
+      - expectedPayload
     JobRun:
       properties:
         id:
@@ -126,27 +147,6 @@ components:
       required:
       - code
       - message
-    Job:
-      properties:
-        id:
-          type: string
-          description: The id of the job.
-        title:
-          type: string
-          description: The title of the job.
-        description:
-          type: string
-          description: The description of the job.
-        expectedPayload:
-          type: array
-          items:
-            type: string
-          description: The expected payload of the job.
-      required:
-      - id
-      - title
-      - description
-      - expectedPayload
   responses:
     Unauthorized:
       description: Unauthorized

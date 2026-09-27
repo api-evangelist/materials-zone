@@ -43,6 +43,13 @@ paths:
       operationId: getFilesByCode
       x-operation-id-source: derived
 components:
+  responses:
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   schemas:
     File:
       properties:
@@ -73,13 +80,6 @@ components:
       required:
       - code
       - message
-  responses:
-    Unauthorized:
-      description: Unauthorized
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
   securitySchemes:
     ApiKey:
       type: apiKey

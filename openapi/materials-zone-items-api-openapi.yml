@@ -106,6 +106,16 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    TableValueParameterId:
+      type: string
+      format: uuid
+      description: The parameterId represents the 'column' that this value is in.
+      nullable: true
+    TableValueFormulationProtocolId:
+      type: string
+      format: uuid
+      description: The formulationProtocolId represents the 'column group' that this value is in.
+      nullable: true
     Measurement:
       properties:
         id:
@@ -143,26 +153,24 @@ components:
       - parserCode
       - rawFilename
       - rawFileDownloadURL
-    TableValue:
+    UpdateTableValue:
       properties:
         value:
           $ref: '#/components/schemas/TableValueValue'
         parameterId:
           $ref: '#/components/schemas/TableValueParameterId'
         formulationProtocolId:
-          $ref: '#/components/schemas/TableValueFormulationProtocolId'
+          type: string
+          format: uuid
+          description: In case the value is created in a formulation protocol, you supply the protocol UUID instead of the parameter UUID.
+          nullable: true
         formulationItemId:
-          $ref: '#/components/schemas/TableValueFormulationItemId'
+          type: string
+          format: uuid
+          description: In case the value is created in a formulation protocol, you supply the item UUID instead of the parameter UUID.
+          nullable: true
       required:
       - value
-      - parameterId
-      - formulationProtocolId
-      - formulationItemId
-    TableValueFormulationItemId:
-      type: string
-      format: uuid
-      description: The formulationItemId represents the item that this value is linked to.
-      nullable: true
     UpdateItem:
       properties:
         dateTime:
@@ -197,16 +205,21 @@ components:
       required:
       - code
       - message
-    TableValueParameterId:
-      type: string
-      format: uuid
-      description: The parameterId represents the 'column' that this value is in.
-      nullable: true
-    TableValueValue:
-      type: string
-      description: The value in the table. This string is guaranteed to be parsable to the parameter type.
-      example: '1'
-      nullable: true
+    TableValue:
+      properties:
+        value:
+          $ref: '#/components/schemas/TableValueValue'
+        parameterId:
+          $ref: '#/components/schemas/TableValueParameterId'
+        formulationProtocolId:
+          $ref: '#/components/schemas/TableValueFormulationProtocolId'
+        formulationItemId:
+          $ref: '#/components/schemas/TableValueFormulationItemId'
+      required:
+      - value
+      - parameterId
+      - formulationProtocolId
+      - formulationItemId
     Item:
       properties:
         code:
@@ -266,29 +279,16 @@ components:
       - description
       - values
       - measurements
-    TableValueFormulationProtocolId:
+    TableValueValue:
+      type: string
+      description: The value in the table. This string is guaranteed to be parsable to the parameter type.
+      example: '1'
+      nullable: true
+    TableValueFormulationItemId:
       type: string
       format: uuid
-      description: The formulationProtocolId represents the 'column group' that this value is in.
+      description: The formulationItemId represents the item that this value is linked to.
       nullable: true
-    UpdateTableValue:
-      properties:
-        value:
-          $ref: '#/components/schemas/TableValueValue'
-        parameterId:
-          $ref: '#/components/schemas/TableValueParameterId'
-        formulationProtocolId:
-          type: string
-          format: uuid
-          description: In case the value is created in a formulation protocol, you supply the protocol UUID instead of the parameter UUID.
-          nullable: true
-        formulationItemId:
-          type: string
-          format: uuid
-          description: In case the value is created in a formulation protocol, you supply the item UUID instead of the parameter UUID.
-          nullable: true
-      required:
-      - value
   responses:
     Unauthorized:
       description: Unauthorized

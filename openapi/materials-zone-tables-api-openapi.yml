@@ -363,43 +363,188 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    Measurement:
+    ItemsList:
+      properties:
+        pagination:
+          $ref: '#/components/schemas/PageInfo'
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Item'
+    BaseProtocol:
       properties:
         id:
           type: string
-          description: The id of the measurement.
-        dateCreated:
-          type: string
-          format: date-time
-          description: Immutable timestamp of when the measurement was created.
-        dateUpdated:
-          type: string
-          format: date-time
-          description: Timestamp that updates whenever the user makes adjustments to the measurement.
+          format: uuid
+          description: UUID of this protocol.
         title:
           type: string
-          description: The title of the measurement.
+          description: Title of this protocol.
+          example: Measured properties
         description:
           type: string
-          description: Description of this measurement.
-        parserCode:
+          description: Description of this protocol (column group).
+          example: This protocol contains parameters representing the measurement conditions.
+          nullable: true
+        hash:
           type: string
-          description: The parser code of the measurement.
-        rawFilename:
-          type: string
-          description: The raw filename of the measurement.
-        rawFilDownloadURL:
-          type: string
-          description: The raw file download URL of the measurement.
+          description: Hash for optimistic concurrency control.
       required:
       - id
-      - dateCreated
-      - dateUpdated
       - title
       - description
-      - parserCode
-      - rawFilename
-      - rawFileDownloadURL
+      - hash
+    UpdateTableValue:
+      properties:
+        value:
+          $ref: '#/components/schemas/TableValueValue'
+        parameterId:
+          $ref: '#/components/schemas/TableValueParameterId'
+        formulationProtocolId:
+          type: string
+          format: uuid
+          description: In case the value is created in a formulation protocol, you supply the protocol UUID instead of the parameter UUID.
+          nullable: true
+        formulationItemId:
+          type: string
+          format: uuid
+          description: In case the value is created in a formulation protocol, you supply the item UUID instead of the parameter UUID.
+          nullable: true
+      required:
+      - value
+    PageInfo:
+      properties:
+        endCursor:
+          type: string
+          description: Last cursor on the page.
+          nullable: true
+        startCursor:
+          type: string
+          description: First cursor on the page.
+          nullable: true
+        hasNextPage:
+          type: boolean
+          description: Whether there is a next page available.
+      required:
+      - endCursor
+      - startCursor
+      - hasNextPage
+    TableValueParameterId:
+      type: string
+      format: uuid
+      description: The parameterId represents the 'column' that this value is in.
+      nullable: true
+    TableValue:
+      properties:
+        value:
+          $ref: '#/components/schemas/TableValueValue'
+        parameterId:
+          $ref: '#/components/schemas/TableValueParameterId'
+        formulationProtocolId:
+          $ref: '#/components/schemas/TableValueFormulationProtocolId'
+        formulationItemId:
+          $ref: '#/components/schemas/TableValueFormulationItemId'
+      required:
+      - value
+      - parameterId
+      - formulationProtocolId
+      - formulationItemId
+    CreateItem:
+      properties:
+        dateTime:
+          type: string
+          format: date-time
+          description: User-configurable timestamp. For example, if the item represents a measurement, then this timestamp can be used to indicate when the measurement was taken.
+          nullable: true
+        description:
+          type: string
+          description: Description of this item.
+          example: This item contains the chemical properties of Aluminum.
+          nullable: true
+        title:
+          type: string
+          description: Title of this item.
+          example: Aluminum
+        values:
+          type: array
+          description: Values in this item, each value is an object that contains the parameter (column) UUID. Only values that the user wishes to be non-null need to be provided.
+          items:
+            $ref: '#/components/schemas/CreateTableValue'
+          maxItems: 10000
+          nullable: true
+      required:
+      - title
+    BatchCreateItemsRequest:
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/CreateItem'
+      required:
+      - items
+    CreateTableValue:
+      properties:
+        value:
+          $ref: '#/components/schemas/TableValueValue'
+        parameterId:
+          $ref: '#/components/schemas/TableValueParameterId'
+        formulationProtocolId:
+          type: string
+          format: uuid
+          description: In case the value is created in a formulation protocol, you supply the protocol UUID instead of the parameter UUID.
+          nullable: true
+        formulationItemId:
+          type: string
+          format: uuid
+          description: In case the value is created in a formulation protocol, you supply the item UUID instead of the parameter UUID.
+          nullable: true
+      required:
+      - value
+    UpdateItem:
+      properties:
+        dateTime:
+          type: string
+          format: date-time
+          description: User-configurable timestamp. For example, if the item represents a measurement, then this timestamp can be used to indicate when the measurement was taken.
+          nullable: true
+        description:
+          type: string
+          description: Description of this item.
+          example: This item contains the chemical properties of Aluminum.
+          nullable: true
+        title:
+          type: string
+          description: Title of this item.
+          example: Aluminum
+          nullable: true
+        values:
+          type: array
+          description: Values in this item, each value is an object that contains the parameter (column) UUID. Only values that the user wishes to update need to be provided.
+          items:
+            $ref: '#/components/schemas/UpdateTableValue'
+          maxItems: 10000
+          nullable: true
+    BatchUpdateItem:
+      allOf:
+      - $ref: '#/components/schemas/UpdateItem'
+      - type: object
+        properties:
+          id:
+            type: string
+            format: uuid
+            description: UUID of the item to update.
+        required:
+        - id
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      required:
+      - code
+      - message
     Protocol:
       allOf:
       - $ref: '#/components/schemas/BaseProtocol'
@@ -430,184 +575,6 @@ components:
         - unit
         - titleTableIds
         - parameters
-    CreateItem:
-      properties:
-        dateTime:
-          type: string
-          format: date-time
-          description: User-configurable timestamp. For example, if the item represents a measurement, then this timestamp can be used to indicate when the measurement was taken.
-          nullable: true
-        description:
-          type: string
-          description: Description of this item.
-          example: This item contains the chemical properties of Aluminum.
-          nullable: true
-        title:
-          type: string
-          description: Title of this item.
-          example: Aluminum
-        values:
-          type: array
-          description: Values in this item, each value is an object that contains the parameter (column) UUID. Only values that the user wishes to be non-null need to be provided.
-          items:
-            $ref: '#/components/schemas/CreateTableValue'
-          maxItems: 10000
-          nullable: true
-      required:
-      - title
-    Item:
-      properties:
-        code:
-          type: string
-          example: AA-123
-          description: Short code that uniquely defines an item within an organization. Consists by default of the user's code and an alphanumerical counter, separated by a dash.
-        dateCreated:
-          type: string
-          format: date-time
-          description: Immutable timestamp of when the item was created.
-        dateTime:
-          type: string
-          format: date-time
-          description: User-configurable timestamp. For example, if the item represents a measurement, then this timestamp can be used to indicate when the measurement was taken.
-          nullable: true
-        dateUpdated:
-          type: string
-          format: date-time
-          description: Timestamp that updates whenever the user makes adjustments to the item.
-        description:
-          type: string
-          description: Description of this item.
-          example: This item contains the chemical properties of Aluminum.
-          nullable: true
-        id:
-          type: string
-          format: uuid
-          description: UUID of this item.
-        tableId:
-          type: string
-          format: uuid
-          description: UUID of the table that this item belongs to.
-        title:
-          type: string
-          description: Title of this item.
-          example: Aluminum
-        values:
-          type: array
-          description: Values in this item, each value is an object that contains the parameter (column) UUID. This array is sparse, meaning, it only contains non-null values.
-          items:
-            $ref: '#/components/schemas/TableValue'
-          nullable: true
-        measurements:
-          type: array
-          description: Measurements in this item.
-          items:
-            $ref: '#/components/schemas/Measurement'
-          nullable: true
-      required:
-      - code
-      - dateCreated
-      - dateUpdated
-      - dateTime
-      - id
-      - tableId
-      - title
-      - description
-      - values
-      - measurements
-    BatchIngestTableItemOutput:
-      properties:
-        id:
-          type: string
-          format: uuid
-        code:
-          type: string
-        action:
-          type: string
-          enum:
-          - CREATED
-          - UPDATED
-          - NOT_CHANGED
-      required:
-      - id
-      - code
-      - action
-    Table:
-      properties:
-        description:
-          type: string
-          description: Description of this table.
-          example: This table contains items with material properties.
-          nullable: true
-        folderId:
-          type: string
-          format: uuid
-          description: UUID of the parent folder.
-          nullable: true
-        id:
-          type: string
-          format: uuid
-          description: UUID of this table.
-        protocols:
-          type: array
-          description: The list of protocols (column groups) in this table. Each item is either a Protocol or a FormulationProtocol.
-          items:
-            oneOf:
-            - $ref: '#/components/schemas/Protocol'
-            - $ref: '#/components/schemas/FormulationProtocol'
-          nullable: true
-        title:
-          type: string
-          description: Title of this table.
-          example: Material Properties
-        hash:
-          type: string
-          description: Hash for optimistic concurrency control.
-      required:
-      - id
-      - title
-      - description
-      - folderId
-      - protocols
-      - hash
-    TableValueValue:
-      type: string
-      description: The value in the table. This string is guaranteed to be parsable to the parameter type.
-      example: '1'
-      nullable: true
-    TableValueFormulationProtocolId:
-      type: string
-      format: uuid
-      description: The formulationProtocolId represents the 'column group' that this value is in.
-      nullable: true
-    UpdateTableValue:
-      properties:
-        value:
-          $ref: '#/components/schemas/TableValueValue'
-        parameterId:
-          $ref: '#/components/schemas/TableValueParameterId'
-        formulationProtocolId:
-          type: string
-          format: uuid
-          description: In case the value is created in a formulation protocol, you supply the protocol UUID instead of the parameter UUID.
-          nullable: true
-        formulationItemId:
-          type: string
-          format: uuid
-          description: In case the value is created in a formulation protocol, you supply the item UUID instead of the parameter UUID.
-          nullable: true
-      required:
-      - value
-    BatchUpdateItem:
-      allOf:
-      - $ref: '#/components/schemas/UpdateItem'
-      - type: object
-        properties:
-          id:
-            type: string
-            format: uuid
-            description: UUID of the item to update.
-        required:
-        - id
     Parameter:
       properties:
         id:
@@ -694,88 +661,111 @@ components:
       - inputParameterIds
       - enumValueOptions
       - linkTables
-    TableValue:
+    BatchUpdateItemsRequest:
       properties:
-        value:
-          $ref: '#/components/schemas/TableValueValue'
-        parameterId:
-          $ref: '#/components/schemas/TableValueParameterId'
-        formulationProtocolId:
-          $ref: '#/components/schemas/TableValueFormulationProtocolId'
-        formulationItemId:
-          $ref: '#/components/schemas/TableValueFormulationItemId'
-      required:
-      - value
-      - parameterId
-      - formulationProtocolId
-      - formulationItemId
-    PageInfo:
-      properties:
-        endCursor:
-          type: string
-          description: Last cursor on the page.
-          nullable: true
-        startCursor:
-          type: string
-          description: First cursor on the page.
-          nullable: true
-        hasNextPage:
-          type: boolean
-          description: Whether there is a next page available.
-      required:
-      - endCursor
-      - startCursor
-      - hasNextPage
-    CreateTableValue:
-      properties:
-        value:
-          $ref: '#/components/schemas/TableValueValue'
-        parameterId:
-          $ref: '#/components/schemas/TableValueParameterId'
-        formulationProtocolId:
-          type: string
-          format: uuid
-          description: In case the value is created in a formulation protocol, you supply the protocol UUID instead of the parameter UUID.
-          nullable: true
-        formulationItemId:
-          type: string
-          format: uuid
-          description: In case the value is created in a formulation protocol, you supply the item UUID instead of the parameter UUID.
-          nullable: true
-      required:
-      - value
-    ItemsList:
-      properties:
-        pagination:
-          $ref: '#/components/schemas/PageInfo'
-        data:
+        items:
           type: array
           items:
-            $ref: '#/components/schemas/Item'
-    UpdateItem:
+            $ref: '#/components/schemas/BatchUpdateItem'
+      required:
+      - items
+    Table:
       properties:
-        dateTime:
-          type: string
-          format: date-time
-          description: User-configurable timestamp. For example, if the item represents a measurement, then this timestamp can be used to indicate when the measurement was taken.
-          nullable: true
         description:
           type: string
-          description: Description of this item.
-          example: This item contains the chemical properties of Aluminum.
+          description: Description of this table.
+          example: This table contains items with material properties.
+          nullable: true
+        folderId:
+          type: string
+          format: uuid
+          description: UUID of the parent folder.
+          nullable: true
+        id:
+          type: string
+          format: uuid
+          description: UUID of this table.
+        protocols:
+          type: array
+          description: The list of protocols (column groups) in this table. Each item is either a Protocol or a FormulationProtocol.
+          items:
+            oneOf:
+            - $ref: '#/components/schemas/Protocol'
+            - $ref: '#/components/schemas/FormulationProtocol'
           nullable: true
         title:
           type: string
-          description: Title of this item.
-          example: Aluminum
-          nullable: true
-        values:
-          type: array
-          description: Values in this item, each value is an object that contains the parameter (column) UUID. Only values that the user wishes to update need to be provided.
-          items:
-            $ref: '#/components/schemas/UpdateTableValue'
-          maxItems: 10000
-          nullable: true
+          description: Title of this table.
+          example: Material Properties
+        hash:
+          type: string
+          description: Hash for optimistic concurrency control.
+      required:
+      - id
+      - title
+      - description
+      - folderId
+      - protocols
+      - hash
+    TableValueFormulationProtocolId:
+      type: string
+      format: uuid
+      description: The formulationProtocolId represents the 'column group' that this value is in.
+      nullable: true
+    BatchIngestTableItemOutput:
+      properties:
+        id:
+          type: string
+          format: uuid
+        code:
+          type: string
+        action:
+          type: string
+          enum:
+          - CREATED
+          - UPDATED
+          - NOT_CHANGED
+      required:
+      - id
+      - code
+      - action
+    Measurement:
+      properties:
+        id:
+          type: string
+          description: The id of the measurement.
+        dateCreated:
+          type: string
+          format: date-time
+          description: Immutable timestamp of when the measurement was created.
+        dateUpdated:
+          type: string
+          format: date-time
+          description: Timestamp that updates whenever the user makes adjustments to the measurement.
+        title:
+          type: string
+          description: The title of the measurement.
+        description:
+          type: string
+          description: Description of this measurement.
+        parserCode:
+          type: string
+          description: The parser code of the measurement.
+        rawFilename:
+          type: string
+          description: The raw filename of the measurement.
+        rawFilDownloadURL:
+          type: string
+          description: The raw file download URL of the measurement.
+      required:
+      - id
+      - dateCreated
+      - dateUpdated
+      - title
+      - description
+      - parserCode
+      - rawFilename
+      - rawFileDownloadURL
     FormulationProtocol:
       allOf:
       - $ref: '#/components/schemas/BaseProtocol'
@@ -808,65 +798,75 @@ components:
         - unit
         - titleTableIds
         - parameters
-    BatchUpdateItemsRequest:
+    Item:
       properties:
-        items:
+        code:
+          type: string
+          example: AA-123
+          description: Short code that uniquely defines an item within an organization. Consists by default of the user's code and an alphanumerical counter, separated by a dash.
+        dateCreated:
+          type: string
+          format: date-time
+          description: Immutable timestamp of when the item was created.
+        dateTime:
+          type: string
+          format: date-time
+          description: User-configurable timestamp. For example, if the item represents a measurement, then this timestamp can be used to indicate when the measurement was taken.
+          nullable: true
+        dateUpdated:
+          type: string
+          format: date-time
+          description: Timestamp that updates whenever the user makes adjustments to the item.
+        description:
+          type: string
+          description: Description of this item.
+          example: This item contains the chemical properties of Aluminum.
+          nullable: true
+        id:
+          type: string
+          format: uuid
+          description: UUID of this item.
+        tableId:
+          type: string
+          format: uuid
+          description: UUID of the table that this item belongs to.
+        title:
+          type: string
+          description: Title of this item.
+          example: Aluminum
+        values:
           type: array
+          description: Values in this item, each value is an object that contains the parameter (column) UUID. This array is sparse, meaning, it only contains non-null values.
           items:
-            $ref: '#/components/schemas/BatchUpdateItem'
-      required:
-      - items
-    BatchCreateItemsRequest:
-      properties:
-        items:
+            $ref: '#/components/schemas/TableValue'
+          nullable: true
+        measurements:
           type: array
+          description: Measurements in this item.
           items:
-            $ref: '#/components/schemas/CreateItem'
+            $ref: '#/components/schemas/Measurement'
+          nullable: true
       required:
-      - items
+      - code
+      - dateCreated
+      - dateUpdated
+      - dateTime
+      - id
+      - tableId
+      - title
+      - description
+      - values
+      - measurements
+    TableValueValue:
+      type: string
+      description: The value in the table. This string is guaranteed to be parsable to the parameter type.
+      example: '1'
+      nullable: true
     TableValueFormulationItemId:
       type: string
       format: uuid
       description: The formulationItemId represents the item that this value is linked to.
       nullable: true
-    Error:
-      type: object
-      properties:
-        code:
-          type: string
-        message:
-          type: string
-      required:
-      - code
-      - message
-    TableValueParameterId:
-      type: string
-      format: uuid
-      description: The parameterId represents the 'column' that this value is in.
-      nullable: true
-    BaseProtocol:
-      properties:
-        id:
-          type: string
-          format: uuid
-          description: UUID of this protocol.
-        title:
-          type: string
-          description: Title of this protocol.
-          example: Measured properties
-        description:
-          type: string
-          description: Description of this protocol (column group).
-          example: This protocol contains parameters representing the measurement conditions.
-          nullable: true
-        hash:
-          type: string
-          description: Hash for optimistic concurrency control.
-      required:
-      - id
-      - title
-      - description
-      - hash
   responses:
     Unauthorized:
       description: Unauthorized
