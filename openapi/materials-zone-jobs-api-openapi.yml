@@ -72,28 +72,14 @@ paths:
       operationId: postJobsByJobIdJobRuns
       x-operation-id-source: derived
 components:
+  responses:
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   schemas:
-    Job:
-      properties:
-        id:
-          type: string
-          description: The id of the job.
-        title:
-          type: string
-          description: The title of the job.
-        description:
-          type: string
-          description: The description of the job.
-        expectedPayload:
-          type: array
-          items:
-            type: string
-          description: The expected payload of the job.
-      required:
-      - id
-      - title
-      - description
-      - expectedPayload
     JobRun:
       properties:
         id:
@@ -147,13 +133,27 @@ components:
       required:
       - code
       - message
-  responses:
-    Unauthorized:
-      description: Unauthorized
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
+    Job:
+      properties:
+        id:
+          type: string
+          description: The id of the job.
+        title:
+          type: string
+          description: The title of the job.
+        description:
+          type: string
+          description: The description of the job.
+        expectedPayload:
+          type: array
+          items:
+            type: string
+          description: The expected payload of the job.
+      required:
+      - id
+      - title
+      - description
+      - expectedPayload
   securitySchemes:
     ApiKey:
       type: apiKey

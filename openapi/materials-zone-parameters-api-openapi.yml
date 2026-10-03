@@ -231,6 +231,16 @@ components:
           schema:
             $ref: '#/components/schemas/Error'
   schemas:
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      required:
+      - code
+      - message
     Parameter:
       properties:
         id:
@@ -317,16 +327,6 @@ components:
       - inputParameterIds
       - enumValueOptions
       - linkTables
-    Error:
-      type: object
-      properties:
-        code:
-          type: string
-        message:
-          type: string
-      required:
-      - code
-      - message
   securitySchemes:
     ApiKey:
       type: apiKey
