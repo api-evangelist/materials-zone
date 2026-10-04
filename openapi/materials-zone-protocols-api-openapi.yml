@@ -302,6 +302,61 @@ components:
           schema:
             $ref: '#/components/schemas/Error'
   schemas:
+    FormulationProtocol:
+      allOf:
+      - $ref: '#/components/schemas/BaseProtocol'
+      - type: object
+        properties:
+          type:
+            type: string
+            description: The type of the protocol, will always be FORMULATION here.
+            enum:
+            - FORMULATION
+            example: FORMULATION
+          unit:
+            type: string
+            description: The unit this formulation protocol's components are measured in.
+            example: '%'
+            nullable: true
+          titleTableIds:
+            type: array
+            description: The list of tables (UUIDs) from which the user may choose items for the formulation.
+            items:
+              type: string
+              format: uuid
+          parameters:
+            type: array
+            description: Only relevant for non-formulation protocols. Will always return an empty list here.
+            items: {}
+            example: []
+        required:
+        - type
+        - unit
+        - titleTableIds
+        - parameters
+    BaseProtocol:
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: UUID of this protocol.
+        title:
+          type: string
+          description: Title of this protocol.
+          example: Measured properties
+        description:
+          type: string
+          description: Description of this protocol (column group).
+          example: This protocol contains parameters representing the measurement conditions.
+          nullable: true
+        hash:
+          type: string
+          description: Hash for optimistic concurrency control.
+      required:
+      - id
+      - title
+      - description
+      - hash
     Protocol:
       allOf:
       - $ref: '#/components/schemas/BaseProtocol'
@@ -332,6 +387,16 @@ components:
         - unit
         - titleTableIds
         - parameters
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      required:
+      - code
+      - message
     Parameter:
       properties:
         id:
@@ -418,71 +483,6 @@ components:
       - inputParameterIds
       - enumValueOptions
       - linkTables
-    BaseProtocol:
-      properties:
-        id:
-          type: string
-          format: uuid
-          description: UUID of this protocol.
-        title:
-          type: string
-          description: Title of this protocol.
-          example: Measured properties
-        description:
-          type: string
-          description: Description of this protocol (column group).
-          example: This protocol contains parameters representing the measurement conditions.
-          nullable: true
-        hash:
-          type: string
-          description: Hash for optimistic concurrency control.
-      required:
-      - id
-      - title
-      - description
-      - hash
-    FormulationProtocol:
-      allOf:
-      - $ref: '#/components/schemas/BaseProtocol'
-      - type: object
-        properties:
-          type:
-            type: string
-            description: The type of the protocol, will always be FORMULATION here.
-            enum:
-            - FORMULATION
-            example: FORMULATION
-          unit:
-            type: string
-            description: The unit this formulation protocol's components are measured in.
-            example: '%'
-            nullable: true
-          titleTableIds:
-            type: array
-            description: The list of tables (UUIDs) from which the user may choose items for the formulation.
-            items:
-              type: string
-              format: uuid
-          parameters:
-            type: array
-            description: Only relevant for non-formulation protocols. Will always return an empty list here.
-            items: {}
-            example: []
-        required:
-        - type
-        - unit
-        - titleTableIds
-        - parameters
-    Error:
-      type: object
-      properties:
-        code:
-          type: string
-        message:
-          type: string
-      required:
-      - code
-      - message
   securitySchemes:
     ApiKey:
       type: apiKey

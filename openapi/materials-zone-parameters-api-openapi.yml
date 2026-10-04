@@ -223,13 +223,6 @@ paths:
       operationId: deleteParametersByParameterId
       x-operation-id-source: derived
 components:
-  responses:
-    Unauthorized:
-      description: Unauthorized
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
   schemas:
     Error:
       type: object
@@ -327,6 +320,13 @@ components:
       - inputParameterIds
       - enumValueOptions
       - linkTables
+  responses:
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   securitySchemes:
     ApiKey:
       type: apiKey

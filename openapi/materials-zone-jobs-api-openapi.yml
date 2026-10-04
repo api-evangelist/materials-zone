@@ -72,14 +72,17 @@ paths:
       operationId: postJobsByJobIdJobRuns
       x-operation-id-source: derived
 components:
-  responses:
-    Unauthorized:
-      description: Unauthorized
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
   schemas:
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      required:
+      - code
+      - message
     JobRun:
       properties:
         id:
@@ -123,16 +126,6 @@ components:
       - status
       - payload
       - logs
-    Error:
-      type: object
-      properties:
-        code:
-          type: string
-        message:
-          type: string
-      required:
-      - code
-      - message
     Job:
       properties:
         id:
@@ -154,6 +147,13 @@ components:
       - title
       - description
       - expectedPayload
+  responses:
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   securitySchemes:
     ApiKey:
       type: apiKey
