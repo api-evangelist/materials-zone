@@ -405,6 +405,16 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      required:
+      - code
+      - message
     Parser:
       properties:
         id:
@@ -577,16 +587,6 @@ components:
       - dateCreated
       - dateUpdated
       - systemParser
-    Error:
-      type: object
-      properties:
-        code:
-          type: string
-        message:
-          type: string
-      required:
-      - code
-      - message
   responses:
     Unauthorized:
       description: Unauthorized

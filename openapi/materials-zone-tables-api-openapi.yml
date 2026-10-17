@@ -363,6 +363,14 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    BatchUpdateItemsRequest:
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/BatchUpdateItem'
+      required:
+      - items
     BatchIngestTableItemOutput:
       properties:
         id:
@@ -380,6 +388,50 @@ components:
       - id
       - code
       - action
+    BatchUpdateItem:
+      allOf:
+      - $ref: '#/components/schemas/UpdateItem'
+      - type: object
+        properties:
+          id:
+            type: string
+            format: uuid
+            description: UUID of the item to update.
+        required:
+        - id
+    BaseProtocol:
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: UUID of this protocol.
+        title:
+          type: string
+          description: Title of this protocol.
+          example: Measured properties
+        description:
+          type: string
+          description: Description of this protocol (column group).
+          example: This protocol contains parameters representing the measurement conditions.
+          nullable: true
+        hash:
+          type: string
+          description: Hash for optimistic concurrency control.
+      required:
+      - id
+      - title
+      - description
+      - hash
+    TableValueFormulationItemId:
+      type: string
+      format: uuid
+      description: The formulationItemId represents the item that this value is linked to.
+      nullable: true
+    TableValueValue:
+      type: string
+      description: The value in the table. This string is guaranteed to be parsable to the parameter type.
+      example: '1'
+      nullable: true
     PageInfo:
       properties:
         endCursor:
@@ -397,6 +449,295 @@ components:
       - endCursor
       - startCursor
       - hasNextPage
+    FormulationProtocol:
+      allOf:
+      - $ref: '#/components/schemas/BaseProtocol'
+      - type: object
+        properties:
+          type:
+            type: string
+            description: The type of the protocol, will always be FORMULATION here.
+            enum:
+            - FORMULATION
+            example: FORMULATION
+          unit:
+            type: string
+            description: The unit this formulation protocol's components are measured in.
+            example: '%'
+            nullable: true
+          titleTableIds:
+            type: array
+            description: The list of tables (UUIDs) from which the user may choose items for the formulation.
+            items:
+              type: string
+              format: uuid
+          parameters:
+            type: array
+            description: Only relevant for non-formulation protocols. Will always return an empty list here.
+            items: {}
+            example: []
+        required:
+        - type
+        - unit
+        - titleTableIds
+        - parameters
+    CreateTableValue:
+      properties:
+        value:
+          $ref: '#/components/schemas/TableValueValue'
+        parameterId:
+          $ref: '#/components/schemas/TableValueParameterId'
+        formulationProtocolId:
+          type: string
+          format: uuid
+          description: In case the value is created in a formulation protocol, you supply the protocol UUID instead of the parameter UUID.
+          nullable: true
+        formulationItemId:
+          type: string
+          format: uuid
+          description: In case the value is created in a formulation protocol, you supply the item UUID instead of the parameter UUID.
+          nullable: true
+      required:
+      - value
+    UpdateTableValue:
+      properties:
+        value:
+          $ref: '#/components/schemas/TableValueValue'
+        parameterId:
+          $ref: '#/components/schemas/TableValueParameterId'
+        formulationProtocolId:
+          type: string
+          format: uuid
+          description: In case the value is created in a formulation protocol, you supply the protocol UUID instead of the parameter UUID.
+          nullable: true
+        formulationItemId:
+          type: string
+          format: uuid
+          description: In case the value is created in a formulation protocol, you supply the item UUID instead of the parameter UUID.
+          nullable: true
+      required:
+      - value
+    TableValue:
+      properties:
+        value:
+          $ref: '#/components/schemas/TableValueValue'
+        parameterId:
+          $ref: '#/components/schemas/TableValueParameterId'
+        formulationProtocolId:
+          $ref: '#/components/schemas/TableValueFormulationProtocolId'
+        formulationItemId:
+          $ref: '#/components/schemas/TableValueFormulationItemId'
+      required:
+      - value
+      - parameterId
+      - formulationProtocolId
+      - formulationItemId
+    TableValueFormulationProtocolId:
+      type: string
+      format: uuid
+      description: The formulationProtocolId represents the 'column group' that this value is in.
+      nullable: true
+    CreateItem:
+      properties:
+        dateTime:
+          type: string
+          format: date-time
+          description: User-configurable timestamp. For example, if the item represents a measurement, then this timestamp can be used to indicate when the measurement was taken.
+          nullable: true
+        description:
+          type: string
+          description: Description of this item.
+          example: This item contains the chemical properties of Aluminum.
+          nullable: true
+        title:
+          type: string
+          description: Title of this item.
+          example: Aluminum
+        values:
+          type: array
+          description: Values in this item, each value is an object that contains the parameter (column) UUID. Only values that the user wishes to be non-null need to be provided.
+          items:
+            $ref: '#/components/schemas/CreateTableValue'
+          maxItems: 10000
+          nullable: true
+      required:
+      - title
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      required:
+      - code
+      - message
+    TableValueParameterId:
+      type: string
+      format: uuid
+      description: The parameterId represents the 'column' that this value is in.
+      nullable: true
+    Measurement:
+      properties:
+        id:
+          type: string
+          description: The id of the measurement.
+        dateCreated:
+          type: string
+          format: date-time
+          description: Immutable timestamp of when the measurement was created.
+        dateUpdated:
+          type: string
+          format: date-time
+          description: Timestamp that updates whenever the user makes adjustments to the measurement.
+        title:
+          type: string
+          description: The title of the measurement.
+        description:
+          type: string
+          description: Description of this measurement.
+        parserCode:
+          type: string
+          description: The parser code of the measurement.
+        rawFilename:
+          type: string
+          description: The raw filename of the measurement.
+        rawFilDownloadURL:
+          type: string
+          description: The raw file download URL of the measurement.
+      required:
+      - id
+      - dateCreated
+      - dateUpdated
+      - title
+      - description
+      - parserCode
+      - rawFilename
+      - rawFileDownloadURL
+    Parameter:
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: UUID of this parameter.
+        title:
+          type: string
+          description: Title of this parameter.
+          example: Boiling Point
+          nullable: true
+        description:
+          type: string
+          description: Description of this parameter.
+          nullable: true
+        titleItemId:
+          type: string
+          format: uuid
+          description: In some cases, the title of a parameter is another item, in this case this field is the UUID of that item, otherwise it's null.
+          nullable: true
+        type:
+          type: string
+          enum:
+          - QUANTITY
+          - TEXT
+          - BOOLEAN
+          - LINK
+          - CALCULATION
+          - ENUM
+          - PREDICTION
+          example: QUANTITY
+          description: The type of the parameter.
+        unit:
+          type: string
+          description: This is the unit of the parameter.
+          example: kg
+          nullable: true
+        hash:
+          type: string
+          description: Hash for optimistic concurrency control.
+        calculation:
+          type: object
+          description: Calculation formula (only applicable for calculation type parameters).
+          nullable: true
+        significantFiguresNum:
+          type: integer
+          description: Number of significant figures to use for the parameter (only applicable for calculation type parameters).
+          nullable: true
+        inputParameterIds:
+          type: array
+          description: IDs of input parameters (only applicable for calculation type parameters).
+          items:
+            type: string
+            format: uuid
+          nullable: true
+        enumValueOptions:
+          type: array
+          description: List of enum value options (only applicable for enum type parameters).
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+                format: uuid
+              title:
+                type: string
+          nullable: true
+        linkTables:
+          type: array
+          description: List of link source table IDs from which items can be linked (only applicable for link type parameters).
+          items:
+            type: string
+            format: uuid
+      required:
+      - id
+      - title
+      - description
+      - titleItemId
+      - type
+      - unit
+      - hash
+      - calculation
+      - significantFiguresNum
+      - inputParameterIds
+      - enumValueOptions
+      - linkTables
+    Table:
+      properties:
+        description:
+          type: string
+          description: Description of this table.
+          example: This table contains items with material properties.
+          nullable: true
+        folderId:
+          type: string
+          format: uuid
+          description: UUID of the parent folder.
+          nullable: true
+        id:
+          type: string
+          format: uuid
+          description: UUID of this table.
+        protocols:
+          type: array
+          description: The list of protocols (column groups) in this table. Each item is either a Protocol or a FormulationProtocol.
+          items:
+            oneOf:
+            - $ref: '#/components/schemas/Protocol'
+            - $ref: '#/components/schemas/FormulationProtocol'
+          nullable: true
+        title:
+          type: string
+          description: Title of this table.
+          example: Material Properties
+        hash:
+          type: string
+          description: Hash for optimistic concurrency control.
+      required:
+      - id
+      - title
+      - description
+      - folderId
+      - protocols
+      - hash
     Item:
       properties:
         code:
@@ -486,268 +827,6 @@ components:
         - unit
         - titleTableIds
         - parameters
-    Parameter:
-      properties:
-        id:
-          type: string
-          format: uuid
-          description: UUID of this parameter.
-        title:
-          type: string
-          description: Title of this parameter.
-          example: Boiling Point
-          nullable: true
-        description:
-          type: string
-          description: Description of this parameter.
-          nullable: true
-        titleItemId:
-          type: string
-          format: uuid
-          description: In some cases, the title of a parameter is another item, in this case this field is the UUID of that item, otherwise it's null.
-          nullable: true
-        type:
-          type: string
-          enum:
-          - QUANTITY
-          - TEXT
-          - BOOLEAN
-          - LINK
-          - CALCULATION
-          - ENUM
-          - PREDICTION
-          example: QUANTITY
-          description: The type of the parameter.
-        unit:
-          type: string
-          description: This is the unit of the parameter.
-          example: kg
-          nullable: true
-        hash:
-          type: string
-          description: Hash for optimistic concurrency control.
-        calculation:
-          type: object
-          description: Calculation formula (only applicable for calculation type parameters).
-          nullable: true
-        significantFiguresNum:
-          type: integer
-          description: Number of significant figures to use for the parameter (only applicable for calculation type parameters).
-          nullable: true
-        inputParameterIds:
-          type: array
-          description: IDs of input parameters (only applicable for calculation type parameters).
-          items:
-            type: string
-            format: uuid
-          nullable: true
-        enumValueOptions:
-          type: array
-          description: List of enum value options (only applicable for enum type parameters).
-          items:
-            type: object
-            properties:
-              id:
-                type: string
-                format: uuid
-              title:
-                type: string
-          nullable: true
-        linkTables:
-          type: array
-          description: List of link source table IDs from which items can be linked (only applicable for link type parameters).
-          items:
-            type: string
-            format: uuid
-      required:
-      - id
-      - title
-      - description
-      - titleItemId
-      - type
-      - unit
-      - hash
-      - calculation
-      - significantFiguresNum
-      - inputParameterIds
-      - enumValueOptions
-      - linkTables
-    CreateItem:
-      properties:
-        dateTime:
-          type: string
-          format: date-time
-          description: User-configurable timestamp. For example, if the item represents a measurement, then this timestamp can be used to indicate when the measurement was taken.
-          nullable: true
-        description:
-          type: string
-          description: Description of this item.
-          example: This item contains the chemical properties of Aluminum.
-          nullable: true
-        title:
-          type: string
-          description: Title of this item.
-          example: Aluminum
-        values:
-          type: array
-          description: Values in this item, each value is an object that contains the parameter (column) UUID. Only values that the user wishes to be non-null need to be provided.
-          items:
-            $ref: '#/components/schemas/CreateTableValue'
-          maxItems: 10000
-          nullable: true
-      required:
-      - title
-    BaseProtocol:
-      properties:
-        id:
-          type: string
-          format: uuid
-          description: UUID of this protocol.
-        title:
-          type: string
-          description: Title of this protocol.
-          example: Measured properties
-        description:
-          type: string
-          description: Description of this protocol (column group).
-          example: This protocol contains parameters representing the measurement conditions.
-          nullable: true
-        hash:
-          type: string
-          description: Hash for optimistic concurrency control.
-      required:
-      - id
-      - title
-      - description
-      - hash
-    Table:
-      properties:
-        description:
-          type: string
-          description: Description of this table.
-          example: This table contains items with material properties.
-          nullable: true
-        folderId:
-          type: string
-          format: uuid
-          description: UUID of the parent folder.
-          nullable: true
-        id:
-          type: string
-          format: uuid
-          description: UUID of this table.
-        protocols:
-          type: array
-          description: The list of protocols (column groups) in this table. Each item is either a Protocol or a FormulationProtocol.
-          items:
-            oneOf:
-            - $ref: '#/components/schemas/Protocol'
-            - $ref: '#/components/schemas/FormulationProtocol'
-          nullable: true
-        title:
-          type: string
-          description: Title of this table.
-          example: Material Properties
-        hash:
-          type: string
-          description: Hash for optimistic concurrency control.
-      required:
-      - id
-      - title
-      - description
-      - folderId
-      - protocols
-      - hash
-    TableValueParameterId:
-      type: string
-      format: uuid
-      description: The parameterId represents the 'column' that this value is in.
-      nullable: true
-    BatchCreateItemsRequest:
-      properties:
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/CreateItem'
-      required:
-      - items
-    UpdateTableValue:
-      properties:
-        value:
-          $ref: '#/components/schemas/TableValueValue'
-        parameterId:
-          $ref: '#/components/schemas/TableValueParameterId'
-        formulationProtocolId:
-          type: string
-          format: uuid
-          description: In case the value is created in a formulation protocol, you supply the protocol UUID instead of the parameter UUID.
-          nullable: true
-        formulationItemId:
-          type: string
-          format: uuid
-          description: In case the value is created in a formulation protocol, you supply the item UUID instead of the parameter UUID.
-          nullable: true
-      required:
-      - value
-    ItemsList:
-      properties:
-        pagination:
-          $ref: '#/components/schemas/PageInfo'
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/Item'
-    BatchUpdateItemsRequest:
-      properties:
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/BatchUpdateItem'
-      required:
-      - items
-    BatchUpdateItem:
-      allOf:
-      - $ref: '#/components/schemas/UpdateItem'
-      - type: object
-        properties:
-          id:
-            type: string
-            format: uuid
-            description: UUID of the item to update.
-        required:
-        - id
-    FormulationProtocol:
-      allOf:
-      - $ref: '#/components/schemas/BaseProtocol'
-      - type: object
-        properties:
-          type:
-            type: string
-            description: The type of the protocol, will always be FORMULATION here.
-            enum:
-            - FORMULATION
-            example: FORMULATION
-          unit:
-            type: string
-            description: The unit this formulation protocol's components are measured in.
-            example: '%'
-            nullable: true
-          titleTableIds:
-            type: array
-            description: The list of tables (UUIDs) from which the user may choose items for the formulation.
-            items:
-              type: string
-              format: uuid
-          parameters:
-            type: array
-            description: Only relevant for non-formulation protocols. Will always return an empty list here.
-            items: {}
-            example: []
-        required:
-        - type
-        - unit
-        - titleTableIds
-        - parameters
     UpdateItem:
       properties:
         dateTime:
@@ -772,101 +851,22 @@ components:
             $ref: '#/components/schemas/UpdateTableValue'
           maxItems: 10000
           nullable: true
-    TableValueFormulationItemId:
-      type: string
-      format: uuid
-      description: The formulationItemId represents the item that this value is linked to.
-      nullable: true
-    TableValueFormulationProtocolId:
-      type: string
-      format: uuid
-      description: The formulationProtocolId represents the 'column group' that this value is in.
-      nullable: true
-    TableValue:
+    BatchCreateItemsRequest:
       properties:
-        value:
-          $ref: '#/components/schemas/TableValueValue'
-        parameterId:
-          $ref: '#/components/schemas/TableValueParameterId'
-        formulationProtocolId:
-          $ref: '#/components/schemas/TableValueFormulationProtocolId'
-        formulationItemId:
-          $ref: '#/components/schemas/TableValueFormulationItemId'
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/CreateItem'
       required:
-      - value
-      - parameterId
-      - formulationProtocolId
-      - formulationItemId
-    TableValueValue:
-      type: string
-      description: The value in the table. This string is guaranteed to be parsable to the parameter type.
-      example: '1'
-      nullable: true
-    Measurement:
+      - items
+    ItemsList:
       properties:
-        id:
-          type: string
-          description: The id of the measurement.
-        dateCreated:
-          type: string
-          format: date-time
-          description: Immutable timestamp of when the measurement was created.
-        dateUpdated:
-          type: string
-          format: date-time
-          description: Timestamp that updates whenever the user makes adjustments to the measurement.
-        title:
-          type: string
-          description: The title of the measurement.
-        description:
-          type: string
-          description: Description of this measurement.
-        parserCode:
-          type: string
-          description: The parser code of the measurement.
-        rawFilename:
-          type: string
-          description: The raw filename of the measurement.
-        rawFilDownloadURL:
-          type: string
-          description: The raw file download URL of the measurement.
-      required:
-      - id
-      - dateCreated
-      - dateUpdated
-      - title
-      - description
-      - parserCode
-      - rawFilename
-      - rawFileDownloadURL
-    CreateTableValue:
-      properties:
-        value:
-          $ref: '#/components/schemas/TableValueValue'
-        parameterId:
-          $ref: '#/components/schemas/TableValueParameterId'
-        formulationProtocolId:
-          type: string
-          format: uuid
-          description: In case the value is created in a formulation protocol, you supply the protocol UUID instead of the parameter UUID.
-          nullable: true
-        formulationItemId:
-          type: string
-          format: uuid
-          description: In case the value is created in a formulation protocol, you supply the item UUID instead of the parameter UUID.
-          nullable: true
-      required:
-      - value
-    Error:
-      type: object
-      properties:
-        code:
-          type: string
-        message:
-          type: string
-      required:
-      - code
-      - message
+        pagination:
+          $ref: '#/components/schemas/PageInfo'
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Item'
   responses:
     Unauthorized:
       description: Unauthorized
