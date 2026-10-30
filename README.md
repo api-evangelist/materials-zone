@@ -64,6 +64,130 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Materials Zone is a company surfaced as a portfolio company of insight-partners and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Materials Zone (MaterialsZone) is a materials-informatics platform that centralizes materials R&D data into a single, structured source of truth. Its RESTful API integrates with lab instruments and supports Python scripts and analytical tools, letting teams automate workflows, connect diverse data sources, and run domain-specific analysis. Data is organized as Folders > Tables > Items, enriched with Parameters, Values, Measurements, Protocols and Parsers, with per-organization data segregation and encryption in transit and at rest. The company is a portfolio company of Insight Partners.
 
-Backed by: insight-partners — https://www.materials.zone/
+**Areas:** Company · Materials Informatics · Materials Science · Research and Development · Laboratory Data · Data Management · Life Sciences
+
+## Materials Zone on APIs.io
+
+Everything profiled for Materials Zone is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/materials-zone/](https://apis.io/providers/materials-zone/)** — or go straight to one of the APIs or properties below.
+
+### APIs (9)
+
+- [Materials Zone Files API](https://apis.io/apis/materials-zone/materials-zone-files-api/) — Files are used to store data not related to specific items.
+- [Materials Zone Folders API](https://apis.io/apis/materials-zone/materials-zone-folders-api/) — Folders are used to organize other Folders and Tables.
+- [Materials Zone Items API](https://apis.io/apis/materials-zone/materials-zone-items-api/) — Items are the rows in tables.
+- [Materials Zone Jobs API](https://apis.io/apis/materials-zone/materials-zone-jobs-api/) — Jobs are used to perform long running tasks.
+- [Materials Zone Measurements API](https://apis.io/apis/materials-zone/materials-zone-measurements-api/) — Measurements are the files that are uploaded to the system and can be parsed.
+- [Materials Zone Parameters API](https://apis.io/apis/materials-zone/materials-zone-parameters-api/) — Parameters are used to define the structure of columns in tables.
+- [Materials Zone Parsers API](https://apis.io/apis/materials-zone/materials-zone-parsers-api/) — Parsers are used to convert instrument specific output files to a MaterialsZone common format.
+- [Materials Zone Protocols API](https://apis.io/apis/materials-zone/materials-zone-protocols-api/) — Protocols are used to group parameters in tables.
+- [Materials Zone Tables API](https://apis.io/apis/materials-zone/materials-zone-tables-api/) — Tables are organized in folders, and contain Items.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [materials-zone](https://apis.io/servers/materials-zone/materials-zone/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Materials Zone Agentic Access](https://apis.io/agentic-access/materials-zone/materials-zone-agentic-access/)
+
+#### Collections (9)
+
+Postman and Open Collection request collections.
+
+- [Materials Zone files API](https://apis.io/collections/materials-zone/open-materials-zone-files-api/)
+- [Materials Zone files folders API](https://apis.io/collections/materials-zone/open-materials-zone-folders-api/)
+- [Materials Zone files items API](https://apis.io/collections/materials-zone/open-materials-zone-items-api/)
+- [Materials Zone files jobs API](https://apis.io/collections/materials-zone/open-materials-zone-jobs-api/)
+- [Materials Zone files measurements API](https://apis.io/collections/materials-zone/open-materials-zone-measurements-api/)
+- [Materials Zone files parameters API](https://apis.io/collections/materials-zone/open-materials-zone-parameters-api/)
+- [Materials Zone files parsers API](https://apis.io/collections/materials-zone/open-materials-zone-parsers-api/)
+- [Materials Zone files protocols API](https://apis.io/collections/materials-zone/open-materials-zone-protocols-api/)
+- [Materials Zone files tables API](https://apis.io/collections/materials-zone/open-materials-zone-tables-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Materials Zone Openapi Overlay](https://apis.io/overlays/materials-zone/materials-zone-openapi-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Materials Zone Authentication](https://apis.io/security/materials-zone/materials-zone-authentication/)
+- [Materials Zone Domain Security](https://apis.io/security/materials-zone/materials-zone-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.materials.zone/)
+- [Documentation](https://developer.materials.zone/)
+- [Getting started](https://developer.materials.zone/)
+- [API reference](https://api.materials.zone/v2beta1/swagger.json)
+- [Blog](https://www.materials.zone/blog)
+- [Terms of service](https://www.materials.zone/legals/terms-of-service)
+- [Privacy policy](https://www.materials.zone/legals/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 33.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 55.1 |
+| Contract governance | 4.5 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 28.0 |
+| Access clarity | 27.6 |
+
+**Agent readiness 23.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.5** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/materials-zone/](https://apis.io/providers/materials-zone/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Materials Zone: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/materials-zone/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
